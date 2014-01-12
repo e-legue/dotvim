@@ -103,6 +103,7 @@ nnoremap <c-right> <c-w>l
 " http://vimcolorschemetest.googlecode.com/svn/html/index-html.html
 "colorscheme candycode
 colorscheme DevC++
+"colorscheme c
 
 set nu
 set wrap

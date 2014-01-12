@@ -5,7 +5,7 @@ Installation:
 Create symlinks:
 
   ln -s ~/.vim/vimrc ~/.vimrc
-  ln -s ~/.vim/gvimrc ~/.gvimrc
+  ln -s ~/.vim/gvimrc ~/.gvimrc (optional, as I haven't specific gui env)
 
 Switch to the `~/.vim` directory, and fetch submodules:
 
