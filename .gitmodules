@@ -16,3 +16,6 @@
 [submodule "bundle/commentary"]
 	path = bundle/commentary
 	url = https://www.github.com/tpope/vim-commentary.git
+[submodule "bundle/conque-gdb"]
+	path = bundle/conque-gdb
+	url = https://www.github.com/vim-scripts/Conque-GDB.git
