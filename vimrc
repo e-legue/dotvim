@@ -1,5 +1,6 @@
 " launch pathogen plugin.
 runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
 
 syntax on                    " syntax highlighing
 filetype on                  " try to detect filetypes
