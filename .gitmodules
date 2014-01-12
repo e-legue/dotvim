@@ -34,3 +34,6 @@
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://www.github.com/ervandew/supertab.git
+[submodule "bundle/tasklist"]
+	path = bundle/tasklist
+	url = https://www.github.com/vim-scripts/TaskList.vim.git
