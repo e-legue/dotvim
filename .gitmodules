@@ -49,3 +49,6 @@
 [submodule "bundle/makeshift"]
 	path = bundle/makeshift
 	url = https://www.github.com/johnsyweb/vim-makeshift.git
+[submodule "bundle/unite"]
+	path = bundle/unite
+	url = https://www.github.com/Shougo/unite.vim.git
