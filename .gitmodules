@@ -13,3 +13,6 @@
 [submodule "bundle/speeddating"]
 	path = bundle/speeddating
 	url = https://www.github.com/tpope/vim-speeddating.git
+[submodule "bundle/commentary"]
+	path = bundle/commentary
+	url = https://www.github.com/tpope/vim-commentary.git
