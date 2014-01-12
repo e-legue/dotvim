@@ -43,3 +43,6 @@
 [submodule "bundle/xml"]
 	path = bundle/xml
 	url = https://www.github.com/othree/xml.vim.git
+[submodule "bundle/tabular"]
+	path = bundle/tabular
+	url = https://www.github.com/godlygeek/tabular.git
