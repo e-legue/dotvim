@@ -52,3 +52,6 @@
 [submodule "bundle/unite"]
 	path = bundle/unite
 	url = https://www.github.com/Shougo/unite.vim.git
+[submodule "bundle/grep"]
+	path = bundle/grep
+	url = https://www.github.com/yegappan/grep.git
