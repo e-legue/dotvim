@@ -46,3 +46,6 @@
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://www.github.com/godlygeek/tabular.git
+[submodule "bundle/makeshift"]
+	path = bundle/makeshift
+	url = https://www.github.com/johnsyweb/vim-makeshift.git
