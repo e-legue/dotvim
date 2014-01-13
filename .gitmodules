@@ -55,3 +55,6 @@
 [submodule "bundle/grep"]
 	path = bundle/grep
 	url = https://www.github.com/yegappan/grep.git
+[submodule "bundle/hardmode"]
+	path = bundle/hardmode
+	url = https://github.com/wikitopian/hardmode.git
