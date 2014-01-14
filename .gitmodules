@@ -58,3 +58,9 @@
 [submodule "bundle/hardmode"]
 	path = bundle/hardmode
 	url = https://github.com/wikitopian/hardmode.git
+[submodule "bundle/rgrep"]
+	path = bundle/rgrep
+	url = https://github.com/rosenfeld/rgrep.vim.git
+[submodule "bundle/unimpaired"]
+	path = bundle/unimpaired
+	url = https://github.com/tpope/vim-unimpaired.git

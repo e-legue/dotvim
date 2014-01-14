@@ -94,12 +94,11 @@ nmap <F8> :ConqueGdbVSplit<CR>
 "                  GREP
 " ------------------------------------------
 nnoremap <silent> <F5> :Rgrep<CR>
-" set grepprg=grep\ -nrI\ --exclude-dir=.*\ --exclude-dir=*rt_test\ --exclude-dir=T[0-9][0-9][0-9]\ --exclude=[CE]TAGS\ $*\ /dev/null
 let Grep_Default_Options = '-I'
 if "$GCMLEAF" != ""
-  let Grep_Skip_Dirs = ".git .GCM *rt_test 'T[0-9][0-9][0-9]' .GCM"
+  let Grep_Skip_Dirs = "'.*' *rt_test 'T[0-9][0-9][0-9]'"
 else
-  let Grep_Skip_Dirs = ".git .svn"
+  let Grep_Skip_Dirs = "'.*'"
 endif
 let Grep_Skip_Files = '[CE]TAGS  *.bak  *~ ChangeLog'
 
@@ -138,8 +137,11 @@ autocmd FileType out set commentstring=//\ %s
 " ------------------------------------------
 "                MAKESHIFT
 " ------------------------------------------
-let g:makeshift_root = "$GCMLEAF"
-nnoremap    <F3>   :<C-U>MakeshiftBuild OPT=d<CR>
+if "$GCMLEAF" != ""
+  let g:makeshift_root = "$GCMLEAF"
+  nnoremap    <F3>   :<C-U>MakeshiftBuild OPT=d<CR>
+endif
+
 nnoremap    <F4>   :<C-U>MakeshiftBuild<CR>
 
 let g:makeshift_systems = {'GCMmake': 'gcmmake code',
