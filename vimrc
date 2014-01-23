@@ -32,12 +32,12 @@ if has("gui_running")
   set guifont=Monospace\ 8
 endif
 
-if "$GCMLEAF" != ""
+if $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
   set tags=$GCMLEAF/CTAGS " read tags file from $GCMLEAF
 endif
 
-" use ,F to jump to tag in a vertical split
-nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
+" use ,f to jump to tag in a vertical split
+nnoremap <silent> ,f :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
 
 " use ,gf to go to file in a vertical split
 nnoremap <silent> ,gf :vertical botright wincmd f<CR>
@@ -95,7 +95,7 @@ nmap <F8> :ConqueGdbVSplit<CR>
 " ------------------------------------------
 nnoremap <silent> <F5> :Rgrep<CR>
 let Grep_Default_Options = '-I'
-if "$GCMLEAF" != ""
+if $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
   let Grep_Skip_Dirs = "'.*' *rt_test 'T[0-9][0-9][0-9]'"
 else
   let Grep_Skip_Dirs = "'.*'"
@@ -128,16 +128,19 @@ colorscheme CodeFactoryv3
 " ------------------------------------------
 "                COMMENTARY
 " ------------------------------------------
-au BufRead,BufNewFile *.in  setfiletype in
-au BufRead,BufNewFile *.out setfiletype out
 
-autocmd FileType in  set commentstring=//\ %s
-autocmd FileType out set commentstring=//\ %s
+if $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
+  au BufRead,BufNewFile *.in  setfiletype in
+  au BufRead,BufNewFile *.out setfiletype out
+
+  autocmd FileType in  set commentstring=//\ %s
+  autocmd FileType out set commentstring=//\ %s
+endif
 
 " ------------------------------------------
 "                MAKESHIFT
 " ------------------------------------------
-if "$GCMLEAF" != ""
+if $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
   let g:makeshift_root = "$GCMLEAF"
   nnoremap    <F3>   :<C-U>MakeshiftBuild OPT=d<CR>
 endif
