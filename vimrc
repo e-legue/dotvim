@@ -141,11 +141,12 @@ endif
 "                MAKESHIFT
 " ------------------------------------------
 if $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
-  let g:makeshift_root = "$GCMLEAF"
+  let g:makeshift_root = $GCMLEAF
+  " echo g:makeshift_root
   nnoremap    <F3>   :<C-U>MakeshiftBuild OPT=d<CR>
 endif
 
-nnoremap    <F4>   :<C-U>MakeshiftBuild<CR>
+nnoremap    <F4>   :<C-U>MakeshiftBuild OPT=o<CR>
 
 let g:makeshift_systems = {'GCMmake': 'gcmmake code',
                        \   'GCMprod': 'gcmmake code', 
