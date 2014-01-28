@@ -18,7 +18,7 @@ set backspace=2 " make backspace work like most other apps
 set foldmethod=indent
 set foldlevel=99
 set encoding=utf-8
-set nonu
+set nu
 set nowrap
 set showbreak=...
 
@@ -83,6 +83,9 @@ map <leader>td <Plug>TaskList
 " ------------------------------------------
 "                TAG BAR
 " ------------------------------------------
+" let g:tagbar_ctags_bin = '/kdtcaelegue/elegue/bin/bin/ctags'
+" I put ctags into /home/emmanuel.legue/bin/ folder and it works, because this
+" folder is in the beginning of the PATH.
 nmap <F10> :TagbarToggle<CR>
 
 " ------------------------------------------
@@ -96,7 +99,7 @@ nmap <F8> :ConqueGdbVSplit<CR>
 nnoremap <silent> <F5> :Rgrep<CR>
 let Grep_Default_Options = '-I'
 if $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
-  let Grep_Skip_Dirs = "'.*' *rt_test 'T[0-9][0-9][0-9]'"
+  let Grep_Skip_Dirs = "'.*' '*rt_test' '*test_rt' 'T[0-9][0-9][0-9]'"
 else
   let Grep_Skip_Dirs = "'.*'"
 endif
