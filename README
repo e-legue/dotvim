@@ -12,3 +12,10 @@ Switch to the `~/.vim` directory, and fetch submodules:
   cd ~/.vim
   git submodule init
   git submodule update
+
+To be able to custom your config, without modifying git files, you can 
+create a file named personal_config.vim - This file is called at the
+end of .vimrc, if it exists.
+Thus you have a place to override "standart" definitions, or add your 
+own preferences, as the colorscheme for exemple.
+
