@@ -1,1 +1,1 @@
-./bundle.awk < .gitmodules  > bundle.xml
+./bundles.awk < ../.gitmodules  > bundles.xml
