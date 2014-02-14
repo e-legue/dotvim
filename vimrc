@@ -2,6 +2,11 @@
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
+function! IsGCMLEAFED()
+  return $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
+endfunction 
+
+
 syntax on                    " syntax highlighing
 filetype plugin indent on    " enable loading indent file for filetype
 
@@ -18,9 +23,10 @@ set backspace=2 " make backspace work like most other apps
 set foldmethod=indent
 set foldlevel=99
 set encoding=utf-8
-set nu
+set nonu
 set nowrap
 set showbreak=...
+set mouse=a
 
 " gvim configuration
 if has("gui_running")
@@ -30,10 +36,6 @@ if has("gui_running")
   set guioptions-=T  "remove toolbar
   set lines=66 columns=122
   set guifont=Monospace\ 8
-endif
-
-if $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
-  set tags=$GCMLEAF/CTAGS " read tags file from $GCMLEAF
 endif
 
 " use ,f to jump to tag in a vertical split
@@ -60,6 +62,15 @@ nnoremap <C-Left> :tabprevious<CR>
 nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
+
+
+
+
+
+
+if IsGCMLEAFED()
+  set tags=$GCMLEAF/CTAGS " read tags file from $GCMLEAF
+endif
 
 
 " **********************************************************************************
@@ -98,7 +109,7 @@ nmap <F8> :ConqueGdbVSplit<CR>
 " ------------------------------------------
 nnoremap <silent> <F5> :Rgrep<CR>
 let Grep_Default_Options = '-I'
-if $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
+if IsGCMLEAFED()
   let Grep_Skip_Dirs = "'.*' '*rt_test' '*test_rt' 'T[0-9][0-9][0-9]'"
 else
   let Grep_Skip_Dirs = "'.*'"
@@ -122,17 +133,13 @@ let g:airline#extensions#tagbar#enabled = 1
 " ------------------------------------------
 "                COLORSCHEME
 " ------------------------------------------
-" http://vimcolorschemetest.googlecode.com/svn/html/index-html.html
-colorscheme CodeFactoryv3
-"colorscheme candycode
-"colorscheme DevC++
-"colorscheme c
+colorscheme c
 
 " ------------------------------------------
 "                COMMENTARY
 " ------------------------------------------
 
-if $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
+if IsGCMLEAFED()
   au BufRead,BufNewFile *.in  setfiletype in
   au BufRead,BufNewFile *.out setfiletype out
 
@@ -143,14 +150,25 @@ endif
 " ------------------------------------------
 "                MAKESHIFT
 " ------------------------------------------
-if $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
+if IsGCMLEAFED()
   let g:makeshift_root = $GCMLEAF
   " echo g:makeshift_root
   nnoremap    <F3>   :<C-U>MakeshiftBuild OPT=d<CR>
+  nnoremap    <F4>   :<C-U>MakeshiftBuild OPT=o<CR>
+
+  let g:makeshift_systems = {'GCMmake': 'gcmmake code',
+                         \   'GCMprod': 'gcmmake code', 
+                          \  }
+else 
+  nnoremap    <F4>   :<C-U>MakeshiftBuildo<CR>
 endif
 
-nnoremap    <F4>   :<C-U>MakeshiftBuild OPT=o<CR>
+" **********************************************************************************
+"
+" CALL PERSONAL DEFINTION, to add or override some declarations.
+"
+" **********************************************************************************
 
-let g:makeshift_systems = {'GCMmake': 'gcmmake code',
-                       \   'GCMprod': 'gcmmake code', 
-                       \  }
+if filereadable($HOME . "/.vim/personal_config.vim")
+  source $HOME/.vim/personal_config.vim
+endif
