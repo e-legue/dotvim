@@ -1,26 +1,26 @@
-<?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="vimrc.xsl"?>
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/vimrc.xsl"?>
 <root>
   <mappings>
     <map>
       <keys>,f</keys>
-      <description>jump to tag into vertical split</description>
+      <description>Jump to tag into vertical split</description>
     </map>
     <map>
       <keys>,gf</keys>
-      <description>go to file in a vertical split</description>
+      <description>Go to file in a vertical split</description>
     </map>
     <map>
       <keys>gf</keys>
-      <description>go to file</description>
+      <description>Go to file</description>
     </map>
     <map>
       <keys>gd</keys>
-      <description>go to definition</description>
+      <description>Go to definition</description>
     </map>
     <map>
-      <keys>&lt;CTRL-w&gt;UP|DOWN|LEFT|RIGHT</keys>
-      <description>Navigate through split buffers.</description>
+      <keys>^w[←↑↓→]</keys>
+      <description>navigate through split buffers.</description>
     </map>
   </mappings>
 
