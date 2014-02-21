@@ -28,16 +28,6 @@ set nowrap
 set showbreak=...
 set mouse=a
 
-" gvim configuration
-if has("gui_running")
-  " GUI is running or is about to start.
-  " Maximize gvim window.
-  set guioptions-=m  "remove menu bar
-  set guioptions-=T  "remove toolbar
-  set lines=66 columns=122
-  set guifont=Monospace\ 8
-endif
-
 " use ,f to jump to tag in a vertical split
 nnoremap <silent> ,f :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
 
