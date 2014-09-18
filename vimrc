@@ -48,8 +48,10 @@ nnoremap <silent> <C-w>- <C-w>t<C-w>K
 nnoremap <silent> <C-w>i <C-w>t<C-w>H
 
 " http://vim.wikia.com/wiki/Using_tab_pages
-nnoremap <C-Left> :tabprevious<CR>
-nnoremap <C-Right> :tabnext<CR>
+" Instead of CTRL+arrow LEFT|RIGHT, I prefer the same keys sequence used in
+" terminal, ie CTRL+page UP|DOWN.
+" nnoremap <C-Left> :tabprevious<CR> 
+" nnoremap <C-Right> :tabnext<CR>
 nnoremap <silent> <A-Left> :execute 'silent! tabmove ' . (tabpagenr()-2)<CR>
 nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
@@ -97,7 +99,7 @@ nmap <F8> :ConqueGdbVSplit<CR>
 " ------------------------------------------
 "                  GREP
 " ------------------------------------------
-nnoremap <silent> <F5> :Rgrep<CR>
+nnoremap <silent> <F6> :Rgrep<CR>
 let Grep_Default_Options = '-I'
 if IsGCMLEAFED()
   let Grep_Skip_Dirs = "'.*' '*rt_test' '*test_rt' 'T[0-9][0-9][0-9]'"
