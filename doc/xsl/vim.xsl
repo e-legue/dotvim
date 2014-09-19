@@ -1,19 +1,19 @@
 <?xml version="1.0"?> 
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
-
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0" xmlns="http://www.w3.org/1999/xhtml">
+  <xsl:output method="xml" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN" indent="yes"/>
 
 <xsl:template match="/root">
 <html>
 <head>
   <meta charset="UTF-8"/>
-  <title>Vim page</title>
+  <title>Vim memo</title>
   <style>
 .key {font-style:italic} 
   </style>
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.9.2/themes/claro/claro.css"/>
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.9.2/dijit/themes/claro/claro.css"/>
-  <script>dojoConfig = {parseOnLoad: true}</script>
-  <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.9.2/dojo/dojo.js" data-dojo-config="async: true"></script>
+  <script type="text/javascript">dojoConfig = {parseOnLoad: true}</script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.9.2/dojo/dojo.js" data-dojo-config="async: true"></script>
 </head>
 <body>
   <xsl:apply-templates/>

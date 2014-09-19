@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="xsl/vimrc.xsl"?>
+<?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
 <root>
   <mappings>
     <map>
@@ -21,6 +21,10 @@
     <map>
       <keys>^w[←↑↓→]</keys>
       <description>navigate through split buffers.</description>
+    </map>
+    <map>
+      <keys mode="command-line">:set (no)cursor(line|column)</keys>
+      <description>Hightlight current line or column. Use prefix no to unset.</description>
     </map>
   </mappings>
 
