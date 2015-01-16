@@ -1,32 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
 <root>
-  <mappings>
+  http://vimdoc.sourceforge.net/htmldoc/
+  <mapping>
+    <section name="tab1">
     <map>
       <keys>,f</keys>
       <description>Jump to tag into vertical split</description>
     </map>
     <map>
-      <keys>,gf</keys>
-      <description>Go to file in a vertical split</description>
+      <keys>[,]gf</keys>
+      <description>Go to file [in a vertical split]</description>
     </map>
     <map>
-      <keys>gf</keys>
-      <description>Go to file</description>
-    </map>
-    <map>
-      <keys>gd</keys>
-      <description>Go to definition</description>
+      <keys>gd [i</keys>
+      <description>Go to definition (go to variable definition)</description>
     </map>
     <map>
       <keys>^w[←↑↓→]</keys>
       <description>navigate through split buffers.</description>
     </map>
     <map>
+      <keys>^[⇞⇟],g[tT]</keys>
+      <description>navigate through tabulation (next, previous).</description>
+    </map>
+    </section>
+    <section name="tab2">
+    <map>
+      <keys>localleader</keys>
+      <description>\ (default value)</description>
+    </map>
+    <map>
       <keys mode="command-line">:set (no)cursor(line|column)</keys>
       <description>Hightlight current line or column. Use prefix no to unset.</description>
     </map>
-  </mappings>
+    <map mode="diff">
+      <keys>[c ]c</keys>
+      <description>In diff mode, navigate through differences.</description>
+      <reference>http://vimdoc.sourceforge.net/htmldoc/diff.html</reference>
+    </map>
+    <map mode="diff">
+      <keys>:windo diffthis</keys>
+      <description>enable diff mode betwenne In diff mode, navigate through differences.</description>
+    </map>
+    <map mode="xml-plugin">
+      <keys>&lt;localleader&gt;%</keys>
+      <description>jump to the matching tag.</description>
+    </map>
+    <map mode="count pattern">
+      <keys>:%s/<i>pattern</i>//gn</keys>
+      <description>look for a string and find the number of occurrences.</description>
+      <reference>http://vimdoc.sourceforge.net/htmldoc/tips.html#count-items</reference>
+    </map>
+    <map>
+      <keys>g[Uu]w</keys>
+      <description>word in Uppercase, (u - lowercase)</description>
+    </map>
+  </section>
+  </mapping>
+
 
   <plugins>
     <plugin name="tagbar">
