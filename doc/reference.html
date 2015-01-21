@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title> - jsFiddle demo</title>
+  
+  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/dojo/1.8.3/dojo/dojo.js' data-dojo-config="parseOnLoad:true, async:'legacyAsync'"></script>
+  
+  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+  
+  
+  <link rel="stylesheet" type="text/css" href="/css/result-light.css">
+  
+    
+      <link rel="stylesheet" type="text/css" href="http://ajax.googleapis.com/ajax/libs/dojo/1.8/dijit/themes/claro/claro.css">
+    
+  
+    
+      <script type='text/javascript' src="http://amd.egoworx.com/package/xstyle-0.0.5.js"></script>
+    
+  
+    
+      <script type='text/javascript' src="http://amd.egoworx.com/package/put-selector-0.3.2.js"></script>
+    
+  
+    
+      <script type='text/javascript' src="http://amd.egoworx.com/package/dgrid-0.3.3.js"></script>
+    
+  
+  <style type='text/css'>
+    html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+ 
+#appLayout {
+    height: 100%;
+}
+
+.claro .demoLayout .topPanel {
+    background-color: #d0e9fc;
+}
+
+.claro .demoLayout .bottomPanel {
+    background-color: #d0e9fc;
+    height: 35px;
+}
+
+#dgrid .dgrid-column-set-0 {
+    width: 10%;
+}
+#dgrid .field-name {
+    width: 20%;
+}
+#dgrid .field-description {
+    width: 80%;
+}
+
+.grid .field-col1 {
+    width: 20px;
+}
+  </style>
+  
+
+
+<script type='text/javascript'>//<![CDATA[ 
+
+require([  
+  "dijit/layout/BorderContainer",
+  "dijit/layout/TabContainer",
+  "dijit/layout/ContentPane",    
+  "dijit/form/Button",
+  
+  "dojo/domReady!"  
+    
+]);
+
+require([  
+  "dojo/parser",  
+  "dojo/_base/declare",
+  "dgrid/Grid",
+  "dgrid/ColumnSet",
+  "dgrid/Selection", 
+  "dgrid/Keyboard",  
+  "dgrid/extensions/DijitRegistry"
+    
+], function(parser, declare, Grid, ColumnSet, Selection, Keyboard, DijitRegistry){
+      parser.parse();
+  
+      var data = [
+            { first: "Bob", last: "Barker", age: 89, dob: "1930", gender: "M"  },
+            { first: "Vanna", last: "White", age: 55, dob: "1930", gender: "M"},
+            { first: "Pat", last: "Sajak", age: 65, dob: "1930", gender: "M" }
+        ];
+      
+      var columns = 	[
+							[
+								[
+									 { field: "first", label: "First" },
+									{ field: "last", label: "Last" }
+								]
+							], [
+								[
+									 { field: "age", label: "Age" },
+									{ field: "dob", label: "DOB" },
+									{ field: "gender", label: "Gender" }
+								]
+							]
+						];      
+  
+      var CustomGrid = declare([Grid, ColumnSet, Selection, Keyboard, DijitRegistry]);
+      
+      var grid = new CustomGrid ({
+            columnSets: columns  
+        }, "grid");
+     grid.renderArray(data);   
+});
+//]]>  
+
+</script>
+
+
+</head>
+<body class="claro">
+  <div id="appLayout" class="demoLayout"
+     data-dojo-type="dijit/layout/BorderContainer"
+     data-dojo-props="design: 'headline', gutters: 'true'">
+    <div id="tabPanel" 
+         data-dojo-type="dijit/layout/TabContainer" 
+         data-dojo-props="region: 'center', tabPosition: 'top'">
+        <div
+                data-dojo-type="dijit/layout/ContentPane"
+                data-dojo-props="title: 'Travellers'">
+                  <h3>Grid</h3>  
+                <div id="grid" class="grid"></div>
+        </div>
+        <div
+            data-dojo-type="dijit/layout/ContentPane"
+            data-dojo-props="title: 'My Work'">
+            <h4>My Work Content</h4>
+        </div>
+        <div id="travellerPanel"                
+            data-dojo-type="dijit/layout/ContentPane"
+            data-dojo-props="title: 'Visitor, Joe', closable:true">
+            <div 
+                data-dojo-type="dijit/layout/BorderContainer" 
+                data-dojo-props="design:'headline'" >
+                <div class="topPanel"
+                     data-dojo-type="dijit/layout/ContentPane"
+                     data-dojo-props="region: 'top'">
+                     Traveller Header (top)
+                </div>    
+                <div 
+                    data-dojo-type="dijit/layout/ContentPane" 
+                    data-dojo-props="region:'left'" style="width: 100px;">
+                    Left pane
+                </div>
+                <div 
+                    data-dojo-type="dijit/layout/ContentPane" 
+                    data-dojo-props="region:'center'">
+                    Center pane
+                </div>
+                <div class="bottomPanel"
+                     data-dojo-type="dijit/layout/ContentPane"
+                     data-dojo-props="region: 'bottom'">
+                     <div id="finalizeButton" 
+                          data-dojo-type="dijit/form/Button">
+                          Finalize
+                    </div>                   
+                </div>                      
+            </div>
+        </div> <!-- id="travellerPanel" -->
+    </div> <!-- class="tabPanel" -->
+    <div class="topPanel"
+         data-dojo-type="dijit/layout/ContentPane"
+         data-dojo-props="region: 'top'">
+         Header (top)
+    </div>        
+</div> <!-- id="appLayout" -->
+
+  
+</body>
+
+
+</html>
+
