@@ -55,6 +55,38 @@
       <xsl:apply-templates select="section"/>
     </div>
   </div>
+  <div style="clear:both"/>
+
+  <div id="grid"></div>
+
+	<!-- load Dojo -->
+	<script>
+		require([
+            'dojo/_base/declare', 'dgrid/Grid', 'dgrid/Keyboard', 'dgrid/Selection', 'dojo/domReady!'
+        ], function (declare, Grid, Keyboard, Selection) {
+            var data = [
+                { first: 'Bob', last: 'Barker', age: 89 },
+                { first: 'Vanna', last: 'White', age: 55 },
+                { first: 'Pat', last: 'Sajak', age: 65 }
+            ];
+
+            // Create a new constructor by mixing in the components
+            var CustomGrid = declare([ Grid, Keyboard, Selection ]);
+
+            // Now, create an instance of our custom grid which
+            // have the features we added!
+            var grid = new CustomGrid({
+                columns: {
+                    first: 'First Name',
+                    last: 'Last Name',
+                    age: 'Age'
+                },
+                selectionMode: 'single', // for Selection; only select a single row at a time
+                cellNavigation: false // for Keyboard; allow only row-level keyboard navigation
+            }, 'grid');
+            grid.renderArray(data);
+        });
+	</script>
 </xsl:template>
 
 
