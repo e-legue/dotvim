@@ -10,35 +10,26 @@
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dijit/themes/claro/claro.css"/>
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojox/grid/resources/Grid.css"/>
   <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojox/grid/resources/nihiloGrid.css"/>
-  <style>
-    .key {font-style:italic}
-    .dojoxGrid table {margin: 0;}
-  </style>
 
+  <script>dojoConfig = {parseOnLoad: true}</script>
   <script>
-   var dojoConfig;
-   (function () {
-   var baseUrl = "http://dgrid.io/js/";
-dojoConfig = {
-async: 1,
-// cacheBust: '201412101200',
-// Load dgrid and its dependencies from a local copy.
-// If we were loading everything locally, this would not
-// be necessary, since Dojo would automatically pick up
-// dgrid, xstyle, and put-selector as siblings of the dojo folder.
-packages: [
-{ name: 'dgrid', location: baseUrl + 'dgrid' },
-{ name: 'xstyle', location: baseUrl + 'xstyle' },
-{ name: 'put-selector', location: baseUrl + 'put-selector' }
-]
-};
-}());
-
-</script>
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojo/dojo.js" data-dojo-config="async: true"></script>a
-
+    var baseUrl = "http://dgrid.io/js/";
+    var dojoConfig = {
+      parseOnLoad: true,
+      has: {
+ 	"dojo-firebug": true,
+        "dojo-debug-messages": true
+	},
+      packages: [ 
+      			{ name: 'dgrid', location: baseUrl + 'dgrid' },
+			{ name: 'xstyle', location: baseUrl + 'xstyle' },
+			{ name: 'put-selector', location: baseUrl + 'put-selector' }
+	 ]
+    };
+  </script>
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojo/dojo.js"></script>a
   <script>
-    require(["dojo/parser", "dijit/layout/TabContainer", "dijit/layout/ContentPane"]);
+    require(["dojo/parser", "dijit/layout/TabContainer", "dijit/layout/ContentPane", "dgrid/Grid", "dojo/domReady!"]);
   </script>
 </head>
 <body class="claro">
@@ -78,25 +69,6 @@ packages: [
     <xsl:element name="div">
       <xsl:attribute name="id"><xsl:value-of select="@name"/></xsl:attribute>
     </xsl:element>
-<script>
-require([ 'dgrid/Grid', 'dojo/domReady!' ], function (Grid) {
-var data = [
-{ first: 'Bob', last: 'Barker', age: 89 },
-{ first: 'Vanna', last: 'White', age: 55 },
-{ first: 'Pat', last: 'Sajak', age: 65 }
-];
-
-var grid = new Grid({
-columns: {
-first: 'First Name',
-last: 'Last Name',
-age: 'Age'
-}
-}, '<xsl:value-of select="@name"/>');
-grid.renderArray(data);
-});
-</script>
-
 
   </xsl:element>
 </xsl:template>
