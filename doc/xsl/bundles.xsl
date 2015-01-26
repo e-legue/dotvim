@@ -28,7 +28,9 @@
         <h2>List of bundles</h2>
         <div>
           <div data-dojo-type="dijit/layout/AccordionContainer">
-            <xsl:apply-templates/>
+              <xsl:apply-templates>
+                <xsl:sort select="@name"></xsl:sort>
+              </xsl:apply-templates>
           </div>
         </div>
       </body>

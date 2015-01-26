@@ -4,61 +4,130 @@
   http://vimdoc.sourceforge.net/htmldoc/
   <mapping>
     <section name="tab1">
-    <map>
-      <keys>,f</keys>
-      <description>Jump to tag into vertical split</description>
-    </map>
-    <map>
-      <keys>[,]gf</keys>
-      <description>Go to file [in a vertical split]</description>
-    </map>
-    <map>
-      <keys>gd [i</keys>
-      <description>Go to definition (go to variable definition)</description>
-    </map>
-    <map>
-      <keys>^w[←↑↓→]</keys>
-      <description>navigate through split buffers.</description>
-    </map>
-    <map>
-      <keys>^[⇞⇟],g[tT]</keys>
-      <description>navigate through tabulation (next, previous).</description>
-    </map>
+      <map>
+        <keys>,f</keys>
+        <description>Jump to tag into vertical split</description>
+      </map>
+      <map>
+        <keys>[,]gf</keys>
+        <description>Go to file [in a vertical split]</description>
+      </map>
+      <map>
+        <keys>gd [i</keys>
+        <description>Go to definition (go to variable definition)</description>
+      </map>
+      <map>
+        <keys>^w[←↑↓→]</keys>
+        <description>navigate through split buffers</description>
+      </map>
+      <map>
+        <keys>^[⇞⇟],g[tT]</keys>
+        <description>navigate through tabulation (next, previous)</description>
+      </map>
+      </section>
+      <section name="tab2">
+      <map>
+        <keys>localleader</keys>
+        <description>\ (default value)</description>
+      </map>
+      <map>
+        <keys mode="command-line">:set (no)cursor(line|column)</keys>
+        <description>Hightlight current line or column. Use prefix no to unset</description>
+      </map>
+      <map mode="diff">
+        <keys>[c ]c</keys>
+        <description>In diff mode, navigate through differences</description>
+        <reference>http://vimdoc.sourceforge.net/htmldoc/diff.html</reference>
+      </map>
+      <map mode="diff">
+        <keys>:windo diffthis</keys>
+        <description>enable diff mode betwenne In diff mode, navigate through differences</description>
+      </map>
+      <map mode="xml-plugin">
+        <keys>&lt;localleader&gt;%</keys>
+        <description>jump to the matching tag</description>
+      </map>
+      <map mode="count pattern">
+        <keys>:%s/<i>pattern</i>//gn</keys>
+        <description>look for a string and find the number of occurrences</description>
+        <reference>http://vimdoc.sourceforge.net/htmldoc/tips.html#count-items</reference>
+      </map>
+      <map>
+        <keys>g[Uu]w</keys>
+        <description>word in Uppercase, (u - lowercase)</description>
+      </map>
     </section>
-    <section name="tab2">
-    <map>
-      <keys>localleader</keys>
-      <description>\ (default value)</description>
-    </map>
-    <map>
-      <keys mode="command-line">:set (no)cursor(line|column)</keys>
-      <description>Hightlight current line or column. Use prefix no to unset.</description>
-    </map>
-    <map mode="diff">
-      <keys>[c ]c</keys>
-      <description>In diff mode, navigate through differences.</description>
-      <reference>http://vimdoc.sourceforge.net/htmldoc/diff.html</reference>
-    </map>
-    <map mode="diff">
-      <keys>:windo diffthis</keys>
-      <description>enable diff mode betwenne In diff mode, navigate through differences.</description>
-    </map>
-    <map mode="xml-plugin">
-      <keys>&lt;localleader&gt;%</keys>
-      <description>jump to the matching tag.</description>
-    </map>
-    <map mode="count pattern">
-      <keys>:%s/<i>pattern</i>//gn</keys>
-      <description>look for a string and find the number of occurrences.</description>
-      <reference>http://vimdoc.sourceforge.net/htmldoc/tips.html#count-items</reference>
-    </map>
-    <map>
-      <keys>g[Uu]w</keys>
-      <description>word in Uppercase, (u - lowercase)</description>
-    </map>
-  </section>
+    <section name="Command line">
+      <map>
+        <keys>vim -p[N] <i>files</i></keys>
+        <description>open N tab pages (default: one for each file)</description>
+      </map>
+      <map>
+        <keys>vim -o[N] <i>files</i></keys>
+        <description>open N horizontal windows (default: one for each file)</description>
+      </map>
+      <map>
+        <keys>vim -O[N] <i>files</i></keys>
+        <description>open N vertical windows (default: one for each file)</description>
+      </map>
+      <map>
+        <keys>vim -d or vimdiff</keys>
+        <description>start editing in diff mode</description>
+      </map>
+    </section>
+    <section name="Fx">
+      <map>
+        <keys>F1</keys>
+        <description>main help file</description>
+      </map>
+      <map>
+        <keys>F3</keys>
+        <description>make in debug mode OPT=d</description>
+      </map>
+      <map>
+        <keys>F4</keys>
+        <description>make in optimized mode OPT=o</description>
+      </map>
+      <map>
+        <keys>F6</keys>
+        <description>launch Rgrep on current word</description>
+      </map>
+      <map>
+        <keys>F8</keys>
+        <description>launch debugger through ConqueGDB</description>
+      </map>
+      <map>
+        <keys>F10</keys>
+        <description>tag bar</description>
+      </map>
+    </section>
+    <section name="diff mode">
+      <map>
+        <keys>[c or ]c</keys>
+        <description>jump backward or forward between changes</description>
+      </map>
+      <map>
+        <keys>:windo diffthis</keys>
+        <description>compare buffers</description>
+      </map>
+      <map>
+        <keys>:windo diffoff</keys>
+        <description>switch off diff mode</description>
+      </map>
+      <map>
+        <keys>:diffu[pdate]</keys>
+        <description>refresh differences</description>
+      </map>
+      <map>
+        <keys>:diffg[et] [buffspec] or do</keys>
+        <description>modify the current buffer to undo difference</description>
+      </map>
+      <map>
+        <keys>:diffpu[t] [buffspec] or dp</keys>
+        <description>modify another buffer ot undo difference with the current one</description>
+      </map>
+    </section>
   </mapping>
-
 
   <plugins>
     <plugin name="tagbar">

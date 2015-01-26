@@ -10,7 +10,7 @@ endfunction
 syntax on                    " syntax highlighing
 filetype plugin indent on    " enable loading indent file for filetype
 
-au BufNewFile,BufRead *.ycrs set filetype=yaml
+au BufNewFile,BufRead *.yca set filetype=yaml
 
 set history=2000
 set ruler               " show the cursor position all the time
