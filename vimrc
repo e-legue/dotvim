@@ -10,7 +10,7 @@ endfunction
 syntax on                    " syntax highlighing
 filetype plugin indent on    " enable loading indent file for filetype
 
-au BufNewFile,BufRead *.yca set filetype=yaml
+" au BufNewFile,BufRead *.yca set filetype=yaml
 
 set history=2000
 set ruler               " show the cursor position all the time
@@ -123,11 +123,18 @@ let g:airline_section_y = ''
 " status.
 let g:airline_section_z = '%3p%% %l:%c' 
 let g:airline#extensions#tagbar#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#buffer_nr_format = '%s: '
 
 " ------------------------------------------
 "                COLORSCHEME
 " ------------------------------------------
-colorscheme c
+" colorscheme c
+" 
+let g:solarized_termcolors=256
+set background=light
+colorscheme solarized
+call togglebg#map("<F2>")
 
 " ------------------------------------------
 "                COMMENTARY
@@ -153,6 +160,8 @@ if IsGCMLEAFED()
   let g:makeshift_systems = {'GCMmake': 'gcmmake code',
                          \   'GCMprod': 'gcmmake code', 
                           \  }
+
+
 else 
   nnoremap    <F4>   :<C-U>MakeshiftBuildo<CR>
 endif
