@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
+<root>
+  <mapping>
+    <section name="tab1">
+      <map>
+        <keys>:help makeshift</keys>
+        <description>Internal documentation</description>
+      </map>
+    </section>
+  </mapping>
+</root>
+
