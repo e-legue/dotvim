@@ -86,7 +86,7 @@
         var grid = new CustomGrid({
             columns: {
                 command: 'Command',
-                description: 'Description',
+                description: 'Action',
             },
             selectionMode: 'single', // for Selection; only select a single row at a time
             cellNavigation: false // for Keyboard; allow only row-level keyboard navigation

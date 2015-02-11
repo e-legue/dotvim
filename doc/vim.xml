@@ -81,6 +81,10 @@
         <description>main help file</description>
       </map>
       <map>
+        <keys>F2</keys>
+        <description>toggle background colorscheme</description>
+      </map>
+      <map>
         <keys>F3</keys>
         <description>make in debug mode OPT=d</description>
       </map>
