@@ -2,12 +2,87 @@
 <?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
 <root>
   <mapping>
-    <section name="tab1">
+    <section name="General">
       <map>
         <keys>:help fugitive</keys>
         <description>Internal documentation</description>
       </map>
     </section>
+    <section name="Revision">
+      <map>
+        <keys>HEAD</keys>
+        <description>.git/HEAD</description>
+      </map>
+      <map>
+        <keys>master</keys>
+        <description>.git/refs/heads/master</description>
+      </map>
+      <map>
+        <keys>HEAD^{}</keys>
+        <description>The commit referenced by HEAD</description>
+      </map>
+      <map>
+        <keys>HEAD^</keys>
+        <description>The parent of the commit referenced by HEAD</description>
+      </map>
+      <map>
+        <keys>HEAD:</keys>
+        <description>The tree referenced by HEAD</description>
+      </map>
+      <map>
+        <keys>/HEAD</keys>
+        <description>The file named HEAD in the work tree</description>
+      </map>
+      <map>
+        <keys>foo</keys>
+        <description>he file named foo in the work tree</description>
+      </map>
+      <map>
+        <keys>HEAD^:foo</keys>
+        <description>The file named foo in the parent of HEAD</description>
+      </map>
+      <map>
+        <keys>:foo</keys>
+        <description>The file named foo in the index (writable)</description>
+      </map>
+      <map>
+        <keys>-</keys>
+        <description>The current file in HEAD</description>
+      </map>
+      <map>
+        <keys>^</keys>
+        <description>The current file in the previous commit</description>
+      </map>
+      <map>
+        <keys>~3</keys>
+        <description>The current file 3 commits ago</description>
+      </map>
+      <map>
+        <keys>:</keys>
+        <description>.git/index (Same as :Gstatus)</description>
+      </map>
+      <map>
+        <keys>:0</keys>
+        <description>The current file in the index</description>
+      </map>
+      <map>
+        <keys>:1</keys>
+        <description>The current file's common ancestor during a conflict</description>
+      </map>
+      <map>
+        <keys>:2</keys>
+        <description>The current file in the target branch during a conflict</description>
+      </map>
+      <map>
+        <keys>:3</keys>
+        <description>The current file in the merged branch during a conflict</description>
+      </map>
+      <map>
+        <keys>:/foo</keys>
+        <description>The most recent commit with "foo" in the message</description>
+      </map>
+    </section>
   </mapping>
+
 </root>
 
