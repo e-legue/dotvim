@@ -1,0 +1,14 @@
+documentation:
+
+add support to simple quote into description. workaround : see indent with "inner block" in vim.xml, section indent.
+
+add support of mapping for bundle page. need to include file in xslt of bundle.xml.
+
+
+
+
+
+
+
+
+
