@@ -131,6 +131,56 @@
         <description>modify another buffer ot undo difference with the current one</description>
       </map>
     </section>
+    <section name="indent">
+      <map>
+        <keys>[x]&gt;&gt;</keys>
+        <description>indent x line(s) by shiftwidth spaces</description>
+      </map>
+      <map>
+        <keys>[x]&lt;&lt;</keys>
+        <description>de-indent x line(s) by shiftwidth spaces</description>
+      </map>
+      <map>
+        <keys>[x]==</keys>
+        <description>re-indent x line(s)</description>
+      </map>
+      <map>
+        <keys>&gt;%</keys>
+        <description>increase indent of a braced or bracketed block (place cursor on brace first)</description>
+      </map>
+      <map>
+        <keys>=%</keys>
+        <description>reindent a braced or bracketed block (cursor on brace)</description>
+      </map>
+      <map>
+        <keys>&lt;%</keys>
+        <description>decrease indent of a braced or bracketed block (cursor on brace)</description>
+      </map>
+      <map>
+        <keys>]p</keys>
+        <description>paste text, aligning indentation with surroundings</description>
+      </map>
+      <map>
+        <keys>=i{</keys>
+        <description>re-indent the "inner block", i.e. the contents of the block</description>
+      </map>
+      <map>
+        <keys>&gt;i{</keys>
+        <description>increase inner block indent</description>
+      </map>
+      <map>
+        <keys>&lt;i{</keys>
+        <description>decrease inner block indent</description>
+      </map>
+      <map>
+        <keys>gg=G</keys>
+        <description>Re-indent entire buffer</description>
+      </map>
+      <map>
+        <keys>Vjj&gt;</keys>
+        <description>visually mark and then indent 3 (two jj) lines.</description>
+      </map>
+    </section>
   </mapping>
 
   <plugins>
