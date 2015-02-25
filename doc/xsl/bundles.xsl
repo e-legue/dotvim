@@ -43,7 +43,9 @@
       <xsl:attribute name="title"><xsl:value-of select="@name"/></xsl:attribute>
       <xsl:attribute name="selected">true</xsl:attribute>
       <xsl:element name="a"><xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute><xsl:attribute name="target">_blank</xsl:attribute>Reference</xsl:element><br/>
-      bla bla bla ....
+      
+      <xsl:apply-templates select= "document(concat(concat('../', @name),'.xml'))"/>
+      
     </xsl:element>
   </xsl:template>
 </xsl:stylesheet>
