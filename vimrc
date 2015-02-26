@@ -117,15 +117,32 @@ let Grep_Skip_Files = '[CE]TAGS  *.bak  *~ ChangeLog'
 
 set t_Co=256     " enable colors in terminal environment.
 set laststatus=2 " to display statusline.
-let g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 1
+let g:Powerline_symbols = 'fancy'
 
-" let g:airline_left_sep = ''
-" let g:airline_left_alt_sep = ''
-" let g:airline_right_sep = ''
-" let g:airline_right_alt_sep = ''
-" let g:airline_symbols.branch = ''
-" let g:airline_symbols.readonly = ''
-" let g:airline_symbols.linenr = ''
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+
+" unicode symbols
+let g:airline_left_sep = '»'
+let g:airline_left_sep = '▶'
+" This last definition of airline_left_sep that is empty allows a clean status
+" line, because the arrow is not tall enough.
+let g:airline_left_sep = ''
+let g:airline_right_sep = '«'
+let g:airline_right_sep = '◀'
+" The previous comment is also valid here.
+let g:airline_right_sep = ''
+let g:airline_symbols.linenr = '␊'
+let g:airline_symbols.linenr = '␤'
+let g:airline_symbols.linenr = '¶'
+let g:airline_symbols.branch = '⎇'
+let g:airline_symbols.paste = 'ρ'
+let g:airline_symbols.paste = 'Þ'
+let g:airline_symbols.paste = '∥'
+let g:airline_symbols.whitespace = 'Ξ'
+
 
 let g:airline_section_x =  '%{airline#extensions#tagbar#currenttag()}'
 let g:airline_section_y = 'BN: %{bufnr("%")}' 
@@ -136,8 +153,6 @@ set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 " status.
 let g:airline_section_z = '%3p%% %l:%c' 
 let g:airline#extensions#tagbar#enabled = 1
-" let g:airline#extensions#tabline#buffer_nr_show = 1
-" let g:airline#extensions#tabline#buffer_nr_format = '%s: '
 
 " ------------------------------------------
 "                COLORSCHEME
