@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
 <root>
+  <note>
+    <![CDATA[
+    VIMCASTS.org proposes 5 videos about this useful module:
+    <ul>
+      <li><a href="http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/">A complement to command line git</a></li>
+      <li><a href="http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/">Working with the git index</a></li>
+      <li><a href="http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">Resolving merge conflicts with vimdiff</a></li>
+      <li><a href="http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/">Browsing the git object database</a></li>
+      <li><a href="http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">Exploring the history of a git repository</a></li>
+    </ul>  
+    ]]>
+  </note>
   <mapping>
     <section name="General">
       <map>
@@ -67,7 +79,7 @@
       </map>
       <map>
         <keys>:1</keys>
-        <description>The current file's common ancestor during a conflict</description>
+        <description>The current file s common ancestor during a conflict</description>
       </map>
       <map>
         <keys>:2</keys>

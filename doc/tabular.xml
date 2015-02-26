@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
+<root>
+  <note>
+    <![CDATA[
+    VIMCASTS.org proposes one vides about this useful module:
+    <ul>
+      <li><a href="http://vimcasts.org/episodes/aligning-text-with-tabular-vim/">Aligning text with Tabular.vim</a></li>
+    </ul>  
+    ]]>
+  </note>
+  <mapping>
+    <section name="General">
+      <map>
+        <keys>:help tabular</keys>
+        <description>Internal documentation</description>
+      </map>
+    </section>
+  </mapping>
+
+</root>
+

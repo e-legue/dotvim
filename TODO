@@ -2,14 +2,11 @@ documentation:
 
 add support to simple quote into description. workaround : see indent with "inner block" in vim.xml, section indent.
 
-add support of mapping for bundle page. need to include file in xslt of bundle.xml.
-I do some of this. I am able to load [bundle-name].xml file if it exists. Now I should import xslt. That means I need to isolate the right portion of code from xsl/vim.xsl and import this file in the two xsl. 
-http://www.w3schools.com/xsl/el_import.asp
-
 improve UI: 
 - limiting width of first column Command. 
 - deleting scrollbar.
 
+add support of note node into bundle-name.xml files. html tags are not well supported.
 
 
 
