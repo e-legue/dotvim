@@ -3,7 +3,7 @@
 <root>
   http://vimdoc.sourceforge.net/htmldoc/
   <mapping>
-    <section name="tab1">
+    <section name="General">
       <map>
         <keys>,f</keys>
         <description>Jump to tag into vertical split</description>
@@ -24,8 +24,6 @@
         <keys>^[⇞⇟],g[tT]</keys>
         <description>navigate through tabulation (next, previous)</description>
       </map>
-      </section>
-      <section name="tab2">
       <map>
         <keys>localleader</keys>
         <description>\ (default value)</description>
@@ -33,15 +31,6 @@
       <map>
         <keys mode="command-line">:set (no)cursor(line|column)</keys>
         <description>Hightlight current line or column. Use prefix no to unset</description>
-      </map>
-      <map mode="diff">
-        <keys>[c ]c</keys>
-        <description>In diff mode, navigate through differences</description>
-        <reference>http://vimdoc.sourceforge.net/htmldoc/diff.html</reference>
-      </map>
-      <map mode="diff">
-        <keys>:windo diffthis</keys>
-        <description>enable diff mode betwenne In diff mode, navigate through differences</description>
       </map>
       <map mode="xml-plugin">
         <keys>&lt;localleader&gt;%</keys>
@@ -105,7 +94,7 @@
         <description>tag bar</description>
       </map>
     </section>
-    <section name="diff mode">
+    <section name="Diff">
       <map>
         <keys>[c or ]c</keys>
         <description>jump backward or forward between changes</description>
@@ -131,7 +120,7 @@
         <description>modify another buffer ot undo difference with the current one</description>
       </map>
     </section>
-    <section name="indent">
+    <section name="Indent">
       <map>
         <keys>[x]&gt;&gt;</keys>
         <description>indent x line(s) by shiftwidth spaces</description>
@@ -179,6 +168,24 @@
       <map>
         <keys>Vjj&gt;</keys>
         <description>visually mark and then indent 3 (two jj) lines.</description>
+      </map>
+    </section>
+    <section name="Goto file">
+      <map>
+        <keys>gf</keys>
+        <description>open the file name under the cursor in the same window</description>
+      </map>
+      <map>
+        <keys>^wf</keys>
+        <description>open it in a new window</description>
+      </map>
+      <map>
+        <keys>^wgf</keys>
+        <description>open it in a new tab</description>
+      </map>
+      <map native="false">
+        <keys>,gf</keys>
+        <description>open it in a new vertical split window</description>
       </map>
     </section>
   </mapping>
