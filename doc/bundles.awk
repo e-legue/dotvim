@@ -1,4 +1,3 @@
-#!/bin/awk -f
 BEGIN { 
   print "<?xml version=\"1.0\"?>";
   print "<?xml-stylesheet type=\"text/xsl\" href=\"xsl/bundles.xsl\"?>";
