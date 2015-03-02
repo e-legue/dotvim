@@ -10,8 +10,6 @@
       <meta charset="UTF-8"/>
       <title>Vim memo</title>
       <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dijit/themes/claro/claro.css"/>
-      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojox/grid/resources/Grid.css"/>
-      <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojox/grid/resources/nihiloGrid.css"/>
 
       <script>dojoConfig = {parseOnLoad: true}</script>
       <script>
@@ -33,6 +31,21 @@
       <script>
         require(["dojo/parser", "dijit/layout/TabContainer", "dijit/layout/ContentPane", "dgrid/Grid", "dojo/domReady!"]);
       </script>
+      
+      <style>
+.dgrid-column-command{
+    width:15em;
+}
+
+.dgrid {
+    height: auto;
+}
+
+.dgrid .dgrid-scroller {
+    position: relative;
+    overflow: visible;
+}        
+      </style>
     </head>
     <body class="claro">
       <xsl:apply-templates/>

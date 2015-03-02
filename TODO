@@ -3,12 +3,9 @@ documentation:
 add support to simple quote into description. workaround : see indent with "inner block" in vim.xml, section indent.
 
 improve UI: 
-- limiting width of first column Command. 
 - deleting scrollbar.
 
-add support of note node into bundle-name.xml files. html tags are not well supported.
-
-
+add support to keys with native="false" (see goto file).
 
 
 

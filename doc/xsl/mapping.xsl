@@ -5,10 +5,8 @@
 
   <xsl:template match="mapping">
     <h2>Mappings</h2>
-    <div style="width: 900px; height: 500px">
-      <div data-dojo-type="dijit/layout/TabContainer" style="width: 100%; height: 100%;">
-        <xsl:apply-templates select="section"/>
-      </div>
+    <div data-dojo-type="dijit/layout/TabContainer" style="width: 100%; height: 100%;">
+      <xsl:apply-templates select="section"/>
     </div>
   </xsl:template>
 

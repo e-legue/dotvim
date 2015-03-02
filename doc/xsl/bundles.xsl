@@ -11,8 +11,6 @@
         <title>Installed bundles</title>
 
         <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dijit/themes/claro/claro.css"/>
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojox/grid/resources/Grid.css"/>
-        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojox/grid/resources/nihiloGrid.css"/>
         <style>
           .key {font-style:italic}
           .dojoxGrid table {margin: 0;}
@@ -37,7 +35,23 @@
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/dojo/1.10.3/dojo/dojo.js"></script>
         <script>
         require(["dojo/parser", "dijit/layout/TabContainer", "dijit/layout/ContentPane", "dgrid/Grid", "dojo/domReady!"]);
-        </script>
+      </script>
+
+      <style>
+.dgrid-column-command{
+    width:15em;
+}
+/*
+.dgrid {
+    height: auto;
+}
+
+.dgrid .dgrid-scroller {
+    position: relative;
+    overflow: visible;
+}        
+*/       
+      </style>
       </head>
 
       <body class="claro">
@@ -61,5 +75,9 @@
       <xsl:apply-templates select= "document(concat(concat('../', @name),'.xml'))"/>
       
     </xsl:element>
+  </xsl:template>
+
+  <xsl:template match="note">
+    <xsl:value-of select='.' disable-output-escaping="yes"/>
   </xsl:template>
 </xsl:stylesheet>
