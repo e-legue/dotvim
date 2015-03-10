@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
+<root>
+  <note>
+    <![CDATA[
+    <p>This plugin is useful to open a file at a specific line, using the same format as compiler warning.</p>
+    <p>Examples:<br/>
+      <ul>
+        <li>On command line, instead of 'vim bh_rules.c +2450', you can use 'vim bh_rules.c:2450'. That's very useful when you do a copy/paste from your compiler messages.</li>
+        <li>The functionnality is also enabled into vim, with :e or :tabe.</li>
+      </ul>
+    </p>
+    ]]>
+  </note>
+
+</root>
+

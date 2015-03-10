@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
+<root>
+  <note>
+    <![CDATA[
+    <p>This plugin is a wrapper to launch and interact with gdb directly form VI.</p>
+    ]]>
+  </note>
+  <mapping>
+    <section name="General">
+      <map>
+        <keys>:help conque_gdb</keys>
+        <description>Internal documentation</description>
+      </map>
+      <map>
+        <keys>:help conque_termgdb</keys>
+        <description>Internal documentation of conque term on which conque gdb is build.</description>
+      </map>
+    </section>
+    <section name="GDB">
+      <map>
+        <keys>save breakpoint filename</keys>
+        <description>Save </description>
+      </map>
+      <map>
+        <keys>source filename</keys>
+        <description></description>
+      </map>
+    </section>
+ </mapping>
+
+</root>
+

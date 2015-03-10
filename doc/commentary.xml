@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
+<root>
+  <note>
+    <![CDATA[
+    <p>Comment stuff out.</p>
+    ]]>
+  </note>
+  <mapping>
+    <section name="General">
+      <map>
+        <keys>:help commentary</keys>
+        <description>Internal documentation</description>
+      </map>
+      <map>
+        <keys>gc{motion}</keys>
+        <description>Comment or uncomment lines that {motion} moves over</description>
+      </map>
+      <map>
+        <keys>gcc</keys>
+        <description>Comment or uncomment [count] lines</description>
+      </map>
+      <map>
+        <keys>{Visual}gc</keys>
+        <description>Comment or uncomment the highlighted lines</description>
+      </map>
+    </section>
+  </mapping>
+</root>
+

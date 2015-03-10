@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
 <root>
-  http://vimdoc.sourceforge.net/htmldoc/
+  <note>
+    <p>Some useful references:<br/>
+      <ul>
+        <li><a href="http://vimdoc.sourceforge.net/htmldoc/">online vim doc</a></li>
+        <li><a href="http://learnvimscriptthehardway.stevelosh.com/">vim script</a></li>
+        <li><a href="http://vimcasts.org/">vim cast</a></li>
+      </ul>
+    </p>
+  </note>
+
   <mapping>
     <section name="General">
       <map>

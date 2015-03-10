@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
+<root>
+  <note>
+    <![CDATA[
+    <p>:Dox command with the cursor on the function declaration would generate header.</p>
+    ]]>
+  </note>
+</root>
+

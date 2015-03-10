@@ -3,9 +3,12 @@ runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 function! IsGCMLEAFED()
-  return $GCMLEAF != "/misc/altdev1/ref/altenv-3.2"
+  return $GCMLEAF != "/misc/altbuildor/ref/altenv-3.2"
 endfunction 
 
+" echo "test"
+" echo $GCMLEAF
+" echo expand($GCMLEAF)
 
 syntax on                    " syntax highlighing
 filetype plugin indent on    " enable loading indent file for filetype
