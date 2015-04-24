@@ -79,3 +79,6 @@
 [submodule "bundle/file-line"]
 	path = bundle/file-line
 	url = https://github.com/bogado/file-line.git
+[submodule "bundle/ctrlspace"]
+	path = bundle/ctrlspace
+	url = https://github.com/szw/vim-ctrlspace.git
