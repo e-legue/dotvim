@@ -76,99 +76,107 @@
     <section name="Fx">
       <map>
         <keys>F1</keys>
-        <description>main help file</description>
+        <description>Main help file</description>
       </map>
       <map>
         <keys>F2</keys>
-        <description>toggle background colorscheme</description>
+        <description>Toggle background colorscheme</description>
       </map>
       <map>
         <keys>F3</keys>
-        <description>make in debug mode OPT=d</description>
+        <description>Make in debug mode OPT=d</description>
       </map>
       <map>
         <keys>F4</keys>
-        <description>make in optimized mode OPT=o</description>
+        <description>Make in optimized mode OPT=o</description>
       </map>
       <map>
         <keys>F6</keys>
-        <description>launch Rgrep on current word</description>
+        <description>Launch Rgrep on current word</description>
+      </map>
+      <map>
+        <keys>F7</keys>
+        <description>Launch bash through ConqueTerm</description>
       </map>
       <map>
         <keys>F8</keys>
-        <description>launch debugger through ConqueGDB</description>
+        <description>Launch debugger through ConqueGDB</description>
+      </map>
+      <map>
+        <keys>F9</keys>
+        <description>Tag bar</description>
       </map>
       <map>
         <keys>F10</keys>
-        <description>tag bar</description>
+        <description>Toggle Hard/Easy mode</description>
       </map>
     </section>
     <section name="Diff">
       <map>
         <keys>[c or ]c</keys>
-        <description>jump backward or forward between changes</description>
+        <description>Jump backward or forward between changes</description>
       </map>
       <map>
         <keys>:windo diffthis</keys>
-        <description>compare buffers</description>
+        <description>Compare buffers</description>
       </map>
       <map>
         <keys>:windo diffoff</keys>
-        <description>switch off diff mode</description>
+        <description>Switch off diff mode</description>
       </map>
       <map>
         <keys>:diffu[pdate]</keys>
-        <description>refresh differences</description>
+        <description>Refresh differences</description>
       </map>
       <map>
         <keys>:diffg[et] [buffspec] or do</keys>
-        <description>modify the current buffer to undo difference</description>
+        <description>Modify the current buffer to undo difference. When resolving git conflict, use //\d as buffspec.</description>
       </map>
       <map>
         <keys>:diffpu[t] [buffspec] or dp</keys>
-        <description>modify another buffer ot undo difference with the current one</description>
+        <description>Modify another buffer ot undo difference with the current one</description>
       </map>
     </section>
     <section name="Indent">
       <map>
         <keys>[x]&gt;&gt;</keys>
-        <description>indent x line(s) by shiftwidth spaces</description>
+        <description>Indent x line(s) by shiftwidth spaces</description>
       </map>
       <map>
         <keys>[x]&lt;&lt;</keys>
-        <description>de-indent x line(s) by shiftwidth spaces</description>
+        <description>Unindent x line(s) by shiftwidth spaces</description>
       </map>
       <map>
         <keys>[x]==</keys>
-        <description>re-indent x line(s)</description>
+        <description>Indent x line(s)</description>
       </map>
       <map>
         <keys>&gt;%</keys>
-        <description>increase indent of a braced or bracketed block (place cursor on brace first)</description>
+        <description>Increase indent of a braced or bracketed block (place cursor on brace first)</description>
       </map>
       <map>
         <keys>=%</keys>
-        <description>reindent a braced or bracketed block (cursor on brace)</description>
+        <description>Indent a braced or bracketed block (cursor on brace)</description>
       </map>
       <map>
         <keys>&lt;%</keys>
-        <description>decrease indent of a braced or bracketed block (cursor on brace)</description>
+        <description>Decrease indent of a braced or bracketed block (cursor on brace)</description>
       </map>
       <map>
         <keys>]p</keys>
-        <description>paste text, aligning indentation with surroundings</description>
+        <description>Paste text, aligning indentation with surroundings</description>
       </map>
       <map>
         <keys>=i{</keys>
-        <description>re-indent the "inner block", i.e. the contents of the block</description>
+        <description>Re-indent the "inner block", i.e. the contents of the block</description>
       </map>
       <map>
         <keys>&gt;i{</keys>
-        <description>increase inner block indent</description>
+        <description>Increase inner block indent</description>
       </map>
       <map>
         <keys>&lt;i{</keys>
-        <description>decrease inner block indent</description>
+        <description>Decrease inner block indent</description>
       </map>
       <map>
         <keys>gg=G</keys>
@@ -176,25 +184,25 @@
       </map>
       <map>
         <keys>Vjj&gt;</keys>
-        <description>visually mark and then indent 3 (two jj) lines.</description>
+        <description>Visually mark and then indent 3 (two jj) lines.</description>
       </map>
     </section>
     <section name="Goto file">
       <map>
         <keys>gf</keys>
-        <description>open the file name under the cursor in the same window</description>
+        <description>Open the file name under the cursor in the same window</description>
       </map>
       <map>
         <keys>^wf</keys>
-        <description>open it in a new window</description>
+        <description>Open it in a new window</description>
       </map>
       <map>
         <keys>^wgf</keys>
-        <description>open it in a new tab</description>
+        <description>Open it in a new tab</description>
       </map>
       <map native="false">
         <keys>,gf</keys>
-        <description>open it in a new vertical split window</description>
+        <description>Open it in a new vertical split window</description>
       </map>
     </section>
   </mapping>
