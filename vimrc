@@ -114,13 +114,15 @@ let g:ConqueTerm_StartMessages = 0
 "                  GREP
 " ------------------------------------------
 nnoremap <silent> <F6> :Rgrep<CR>
-let Grep_Default_Options = '-I'
+" -I Process a binary file as if it did not contain matching data
+" -i Ignore case distinctions in both the PATTERN and the input files
+let Grep_Default_Options = '-I -i'
 if IsGCMLEAFED()
-  let Grep_Skip_Dirs = "'.*' '*rt_test' '*test_rt' 'T[0-9][0-9][0-9]'"
+  let Grep_Skip_Dirs = "'.*' '*rt_test*' '*test_rt*' 'T[0-9][0-9][0-9]' '*test_acd*' 'test'"
 else
   let Grep_Skip_Dirs = "'.*'"
 endif
-let Grep_Skip_Files = '[CE]TAGS  *.bak  *~ ChangeLog'
+let Grep_Skip_Files = '[CE]TAGS  *.bak  *~ ChangeLog .*'
 
 " ------------------------------------------
 "                   AIRLINE 
