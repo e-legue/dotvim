@@ -32,6 +32,8 @@ set nonu
 set nowrap
 set showbreak=...
 set mouse=a
+set ic    " ignore case. use \C to reactivate.
+
 
 " use ,f to jump to tag in a vertical split
 nnoremap <silent> ,f :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
@@ -79,9 +81,10 @@ endif
 " ------------------------------------------
 "                HARD MODE
 " ------------------------------------------
-" only on user request.
-" autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+" activate hard mode
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+nnoremap <F10> :call ToggleHardMode()<CR>
 
 " ------------------------------------------
 "               TASK LIST
@@ -94,12 +97,18 @@ map <leader>td <Plug>TaskList
 " let g:tagbar_ctags_bin = '/kdtcaelegue/elegue/bin/bin/ctags'
 " I put ctags into /home/emmanuel.legue/bin/ folder and it works, because this
 " folder is in the beginning of the PATH.
-nmap <F10> :TagbarToggle<CR>
+nnoremap <F12> :TagbarToggle<CR>
 
 " ------------------------------------------
 "               ConqueGdb
 " ------------------------------------------
-nmap <F8> :ConqueGdbVSplit<CR>
+nnoremap <silent> <F8> :ConqueGdbVSplit<CR>
+
+nnoremap <silent> <F7> :ConqueTermVSplit /usr/bin/env bash<CR>
+let g:ConqueTerm_ReadUnfocused = 0
+let g:ConqueTerm_CloseOnEnd = 1
+let g:ConqueTerm_StartMessages = 0
+
 
 " ------------------------------------------
 "                  GREP
@@ -190,12 +199,18 @@ if IsGCMLEAFED()
 
   let g:makeshift_systems = {'GCMmake': 'gcmmake code',
                          \   'GCMprod': 'gcmmake code', 
-                          \  }
+                         \  }
 
 
 else 
   nnoremap    <F4>   :<C-U>MakeshiftBuildo<CR>
 endif
+
+" ------------------------------------------
+"                CTRLSPACE
+" ------------------------------------------
+set hidden
+let g:airline_exclude_preview = 1
 
 " **********************************************************************************
 "
