@@ -64,7 +64,7 @@ nnoremap <silent> <A-Right> :execute 'silent! tabmove ' . tabpagenr()<CR>
 
 
 
-
+nnoremap <F9> :!gcmtags<CR>
 
 
 if IsGCMLEAFED()
@@ -105,9 +105,9 @@ nnoremap <F12> :TagbarToggle<CR>
 nnoremap <silent> <F8> :ConqueGdbVSplit<CR>
 
 nnoremap <silent> <F7> :ConqueTermVSplit /usr/bin/env bash<CR>
-let g:ConqueTerm_ReadUnfocused = 0
-let g:ConqueTerm_CloseOnEnd = 1
-let g:ConqueTerm_StartMessages = 0
+let g:ConqueTerm_ReadUnfocused = 1
+" let g:ConqueTerm_CloseOnEnd = 1
+" let g:ConqueTerm_StartMessages = 0
 
 
 " ------------------------------------------
@@ -213,6 +213,16 @@ endif
 " ------------------------------------------
 set hidden
 let g:airline_exclude_preview = 1
+
+
+
+" " ------------------------------------------
+" "                OBSESSION
+" " ------------------------------------------
+" if IsGCMLEAFED()
+"   autocmd VimEnter * Obsession "$GCMLEAF/.session.vim"
+" endif
+
 
 " **********************************************************************************
 "

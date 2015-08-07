@@ -18,10 +18,6 @@
         <description>Jump to tag into vertical split</description>
       </map>
       <map>
-        <keys>[,]gf</keys>
-        <description>Go to file [in a vertical split]</description>
-      </map>
-      <map>
         <keys>gd [i</keys>
         <description>Go to definition (go to variable definition)</description>
       </map>
@@ -104,11 +100,15 @@
       </map>
       <map>
         <keys>F9</keys>
-        <description>Tag bar</description>
+        <description>Launch gmctags</description>
       </map>
       <map>
         <keys>F10</keys>
         <description>Toggle Hard/Easy mode</description>
+      </map>
+      <map>
+        <keys>F12</keys>
+        <description>Tag bar</description>
       </map>
     </section>
     <section name="Diff">
@@ -189,8 +189,8 @@
     </section>
     <section name="Goto file">
       <map>
-        <keys>gf</keys>
-        <description>Open the file name under the cursor in the same window</description>
+        <keys>[,]gf</keys>
+        <description>Go to file [in a vertical split]</description>
       </map>
       <map>
         <keys>^wf</keys>
@@ -200,11 +200,39 @@
         <keys>^wgf</keys>
         <description>Open it in a new tab</description>
       </map>
-      <map native="false">
-        <keys>,gf</keys>
-        <description>Open it in a new vertical split window</description>
+    </section>
+
+    <section name="Nav code">
+      <map>
+        <keys>[{</keys>
+        <description>Jump to the beginning of a C code block (while, switch, if etc)</description>
+      </map>
+      <map>
+        <keys>]}</keys>
+        <description>Jump to the end of a C code block (while, switch, if etc)</description>
+      </map>
+      <map>
+        <keys>[(</keys>
+        <description>Jump to the beginning of a parenthesis</description>
+      </map>
+      <map>
+        <keys>])</keys>
+        <description>Jump to the end of a parenthesis</description>
+      </map>
+      <map>
+        <keys>[[</keys>
+        <description>sections backward or to the previous { in the first column.</description>
+      </map>
+      <map>
+        <keys>]]</keys>
+        <description>sections forward or to the next { in the first column.</description>
+      </map>
+      <map>
+        <keys>[]</keys>
+        <description>sections backward or to the previous } in the first column.</description>
       </map>
     </section>
+
   </mapping>
 
   <plugins>
@@ -255,12 +283,6 @@
   <hints>
     <hint>
 Counting occurence of a pattern: <code>:%s/pattern//gn</code>
-    </hint>
-    <hint>
-Lauching vim in split mode or tab mode:
-horizontal  <code>bash> vim -o [files]</code> 
-vertical    <code>bash> vim -O [files]</code>
-tabulation  <code>bash> vim -p [files]</code>
     </hint>
     <hint>
 Initiate differences between two split windows: <code>:windo diffthis</code>

@@ -41,3 +41,9 @@ Pour desinstaller, il suffit de :
 
 git submodule deinit asubmodule
 git rm asubmodule
+
+
+
+To update bundles: 
+cd ~/.vim
+git submodule update --recursive --remote
