@@ -1,5 +1,4 @@
 .netrwhist
 personal_config.vim
-doc/bundles.xhtml
-doc/vim.xhtml
+doc/*.xhtml
 doc/bundles.xml
