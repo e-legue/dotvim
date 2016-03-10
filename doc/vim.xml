@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="xsl/vim.xsl"?>
+<?xml-stylesheet type="text/xsl" href="xsl/refcard.xsl"?>
 <root>
   <note>
     <p>Some useful references:<br/>
@@ -12,7 +12,29 @@
   </note>
 
   <mapping>
+    <section name="Help">
+      <map>
+        <keys>:help [word]</keys>
+        <description>Open help file or help on first occurence of word</description>
+      </map>
+      <map>
+        <keys>:Helptags</keys>
+        <description>Generate help tags along the runtimepath (pathogen instruction)</description>
+      </map>
+      <map>
+        <keys>^]</keys>
+        <description>Jump to tag.</description>
+      </map>
+      <map>
+        <keys>^O or ^T</keys>
+        <description>Go back where you were.</description>
+      </map>
+    </section>
     <section name="General">
+      <map>
+        <keys>\\</keys>
+        <description>localleader</description>
+      </map>
       <map>
         <keys>,f</keys>
         <description>Jump to tag into vertical split</description>
@@ -26,12 +48,8 @@
         <description>navigate through split buffers</description>
       </map>
       <map>
-        <keys>^[⇞⇟],g[tT]</keys>
+        <keys>g[tT]</keys>
         <description>navigate through tabulation (next, previous)</description>
-      </map>
-      <map>
-        <keys>localleader</keys>
-        <description>\ (default value)</description>
       </map>
       <map>
         <keys mode="command-line">:set (no)cursor(line|column)</keys>
@@ -50,7 +68,12 @@
         <keys>g[Uu]w</keys>
         <description>word in Uppercase, (u - lowercase)</description>
       </map>
+      <map>
+        <keys>^vx91</keys>
+        <description>type character 0x91 (&lt;91&gt;)</description>
+      </map>
     </section>
+
     <section name="Command line">
       <map>
         <keys>vim -p[N] <i>files</i></keys>
@@ -230,6 +253,12 @@
       <map>
         <keys>[]</keys>
         <description>sections backward or to the previous } in the first column.</description>
+      </map>
+    </section>
+    <section name="argdo">
+      <map>
+        <keys>:argdo %s/old/new/ge</keys>
+        <description>will replace in every buffer</description>
       </map>
     </section>
 

@@ -1,60 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/refcard.xsl"?>
+<root>
 
+  <mapping>
+    <section name="command">
+      <map>
+        <keys>F</keys>
+        <description>enable tail -f like behvaior, Ctrl-C to break out of it</description>
+      </map>
+      <map>
+        <keys>v</keys>
+        <description>open file in $EDITOR for editing, defaults to vi/vim</description>
+      </map>
+      <map>
+        <keys>-N</keys>
+        <description>show line numbers</description>
+      </map>
+      <map>
+        <keys>-S</keys>
+        <description>disable line wrapping</description>
+      </map>
+    </section>
 
--S option, see also the man-page.
+    <section name="navigation">
+      <map>
+        <keys>q or ZZ</keys>
+        <description>exit</description>
+      </map>
+      <map>
+        <keys>gg</keys>
+        <description>go to the beginning of the buffer</description>
+      </map>
+      <map>
+        <keys>G</keys>
+        <description>go to the end of buffer</description>
+      </map>
 
-Alternatively, as mentioned in the below comment, if you already opened the file, you can toggle the mode by typing -S and then enter.
+      <map>
+        <keys>j</keys>
+        <description>navigate forward by one line</description>
+      </map>
+      <map>
+        <keys>k</keys>
+        <description>navigate backward by one line</description>
+      </map>
+      <map>
+        <keys>CTRL+f</keys>
+        <description>forward one window</description>
+      </map>
+      <map>
+        <keys>CTRL+b</keys>
+        <description>backward one window</description>
+      </map>
+    </section>      
 
+    <section name="search">
+      <map>
+        <keys>/</keys>
+        <description>search forward</description>
+      </map>
+      <map>
+        <keys>?</keys>
+        <description>search backward</description>
+      </map>
+      <map>
+        <keys>n</keys>
+        <description>continue searching for your pattern in the same direction</description>
+      </map>
+      <map>
+        <keys>N</keys>
+        <description>continue searching for your pattern in the opposite direction</description>
+      </map>
+      <map>
+        <keys>-I / -i</keys>
+        <description>ignore case in your search pattern</description>
+      </map>
+    </section>
+  
+  </mapping>
+</root>
 
-
-    / (search forward)
-    ? (search backwards)
-    F (enable tail -f like behvaior, Ctrl-C to break out of it)
-    v (open file in $EDITOR for editing, defaults to vi/vim)
-
-
-    u - up half page
-    d - down half page
-    k - scroll single line up
-    j - scroll single line down
-    -i - case insensitive searching unless pattern contains capitals (as clo or in less)
-    / /pattern/ - search (used with n)
-    -p /pattern/ open file at /pattern/ (as clo)
-    & /pattern/ show lines containing /pattern/ (like grep)
-
-
-
-    ^f - page down
-    ^b - page up
-    G - go to the end of buffer
-    gg - go to the beginning of the buffer
-
-also - most of them are just vim-like functions for navigation.
-
-    n - continue searching for your pattern in the same direction
-    N - continue searching for your pattern in the opposite direction
-
-    -N - show line numbers
-    -I - ignore case in your search pattern (useful when looking for errors that might be spelled as 'ERROR|Error|error')
-    -G - turn off highlighting
-
-
-    -J add status column on the left, marks columns with search hits.
-    -M more verbose status line.
-    -Q no bells.
-    -R don't convert raw input, lets escape sequences be interpreted.
-    -S disable line wrapping.
-    -i case insensitive searching.
-
-    CTRL+F – forward one window
-    CTRL+B – backward one window
-    CTRL+D – forward half window
-    CTRL+U – backward half window
-
-    j – navigate forward by one line
-    k – navigate backward by one line
-
-    G – go to the end of file
-    g – go to the start of file
-    q or ZZ – exit the less pager
-
-http://www.thegeekstuff.com/2010/02/unix-less-command-10-tips-for-effective-navigation/

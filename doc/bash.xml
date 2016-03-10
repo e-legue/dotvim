@@ -1,19 +1,42 @@
-Bash has built in features to access the last command executed.
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/refcard.xsl"?>
+<root>
 
-!:0 = the name of command executed.
+  <mapping>
+    <section name="Last command">
+      <map>
+        <keys>!:0</keys>
+        <description>the name of command executed</description>
+      </map>
+      <map>
+        <keys>!:1</keys>
+        <description>the first parameter of the previous command</description>
+      </map>
+      <map>
+        <keys>!:*</keys>
+        <description>all of the parameters of the previous command</description>
+      </map>
+      <map>
+        <keys>!:-1 or !$</keys>
+        <description>the final parameter of the previous command</description>
+      </map>
+      <map>
+        <keys>!!</keys>
+        <description>the previous command line</description>
+      </map>
+    </section>
 
-!:1 = the first parameter of the previous command
+    <section name="find">
+      <map>
+        <keys>find ./ -name staf.in | xargs wc -l</keys>
+        <description>count the number of line of every file named staf.in</description>
+      </map>
+      <map>
+        <keys>grep -lr vim.xsl * | xargs sed -i -e 's/vim.xsl/refcard.xsl/g'</keys>
+        <description>find in files and replace by with sed</description>
+      </map>
+    </section>
+  </mapping>
 
-!:* = all of the parameters of the previous command
-
-!:-1 = the final parameter of the previous command
-!$ did the same.
-
-!! = the previous command line
-
-
-
-
-find ./ -name staf.in | xargs wc -l 
-
+</root>
 
