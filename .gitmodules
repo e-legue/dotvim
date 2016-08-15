@@ -70,9 +70,6 @@
 [submodule "bundle/doxygen"]
 	path = bundle/doxygen
 	url = https://github.com/vim-scripts/DoxygenToolkit.vim.git
-[submodule "bundle/greplace"]
-	path = bundle/greplace
-	url = https://github.com/vim-scripts/greplace.vim.git
 [submodule "bundle/ctrlspace"]
 	path = bundle/ctrlspace
 	url = https://github.com/szw/vim-ctrlspace.git
