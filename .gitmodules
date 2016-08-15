@@ -73,9 +73,6 @@
 [submodule "bundle/greplace"]
 	path = bundle/greplace
 	url = https://github.com/vim-scripts/greplace.vim.git
-[submodule "bundle/file-line"]
-	path = bundle/file-line
-	url = https://github.com/bogado/file-line.git
 [submodule "bundle/ctrlspace"]
 	path = bundle/ctrlspace
 	url = https://github.com/szw/vim-ctrlspace.git
@@ -85,3 +82,6 @@
 [submodule "bundle/linediff"]
 	path = bundle/linediff
 	url = https://github.com/AndrewRadev/linediff.vim.git
+[submodule "bundle/vim-fetch"]
+	path = bundle/vim-fetch
+	url = https://github.com/kopischke/vim-fetch.git
