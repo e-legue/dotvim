@@ -53,27 +53,4 @@
     </html>
   </xsl:template>
 
-
-  <xsl:template match="bundle">
-    <xsl:element name="a">
-      <xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute>
-      <xsl:attribute name="target">_blank</xsl:attribute>
-      <xsl:value-of select="@name"/>
-      <br/>
-    </xsl:element>
-  </xsl:template>
-
-
-  <xsl:template match="plugins">
-    <xsl:element name="h2">Bundles</xsl:element>
-    <br/>
-  </xsl:template>
-
-
-  <xsl:template match="hints">
-    <xsl:element name="h2">Hints</xsl:element>
-    <br/>
-  </xsl:template>
-
-
 </xsl:stylesheet>

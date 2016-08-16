@@ -56,7 +56,7 @@
 
       <body class="claro">
         <h2>List of bundles</h2>
-        <div data-dojo-type="dijit/layout/TabContainer" tabPosition="left-h" style="width: 1024px; height: 800px;">
+        <div data-dojo-type="dijit/layout/TabContainer" data-dojo-props='tabStrip:true' style="width: 1024px; height: 600px;">
           <xsl:apply-templates>
             <xsl:sort select="@name"></xsl:sort>
           </xsl:apply-templates>

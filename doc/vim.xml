@@ -264,59 +264,5 @@
 
   </mapping>
 
-  <plugins>
-    <plugin name="tagbar">
-      <adopt>
-        This module works with <a href="http://ctags.sourceforge.net/">exuberant ctags</a>, and not with gnu version. In AD-Opt environment, the default version is the last one. The workaround is to install the exuberant version into your $HOME/bin folder. Thus, gcmtags script will use that version, because aliases do not work with find -exec command. 
-      </adopt>
-    </plugin>
-
-    <plugin name="pathogen">
-      <generic>
-        This <a href="http://vimcasts.org/episodes/synchronizing-plugins-with-git-submodules-and-pathogen/">video</a> is a really good introduction how to install and use pathogen. Those instructions were used to build this configuration.
-      </generic>
-    </plugin>
-
-    <plugin name="unimpaired">
-      <generic>
-        It provides some encoding/decoding (xml [x or ]x, and C string style [y ]y).
-      </generic>
-    </plugin>
-
-
-    <plugin name="fugitive">
-      <generic>
-        Some videos about this plugin.
-        <ul>
-          <li><a href="http://vimcasts.org/episodes/fugitive-vim---a-complement-to-command-line-git/">a complement to command line git</a></li>
-          <li><a href="http://vimcasts.org/episodes/fugitive-vim-working-with-the-git-index/">working with the git index</a></li>
-          <li><a href="http://vimcasts.org/episodes/fugitive-vim-resolving-merge-conflicts-with-vimdiff/">resolving merge conflicts with vimdiff</a></li>
-          <li><a href="http://vimcasts.org/episodes/fugitive-vim-browsing-the-git-object-database/">browsing the git object database</a></li>
-          <li><a href="http://vimcasts.org/episodes/fugitive-vim-exploring-the-history-of-a-git-repository/">exploring the history of a git repository</a></li>
-        </ul>
-      </generic>
-    </plugin>
-
-    <plugin name="tabular">
-      <generic>
-        This <a href="http://vimcasts.org/episodes/aligning-text-with-tabular-vim/">video</a> is a really good introduction this plugin.
-      </generic>
-    </plugin>
-
-  </plugins>
-
-  <web>
-    <link>http://vimcasts.org/episodes/archive</link>
-  </web>
-
-  <hints>
-    <hint>
-Counting occurence of a pattern: <code>:%s/pattern//gn</code>
-    </hint>
-    <hint>
-Initiate differences between two split windows: <code>:windo diffthis</code>
-To cancel, <code>:diff off</code>
-    </hint>
-  </hints>
 </root>
 
