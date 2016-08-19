@@ -4,14 +4,18 @@
 
 
   <xsl:template match="mapping">
-    <h2>Mappings</h2>
+    <xsl:param name="testParam" />
+    <h2>Mappings <xsl:value-of select="$testParam" /></h2>
     <div data-dojo-type="dijit/layout/TabContainer" style="width: 100%;" doLayout="false" data-dojo-props='tabStrip:true'>
-      <xsl:apply-templates select="section"/>
+      <xsl:apply-templates select="section">
+        <xsl:with-param name="testParam2"><xsl:value-of select="$testParam" /></xsl:with-param>
+      </xsl:apply-templates>
     </div>
   </xsl:template>
 
 
   <xsl:template match="section">
+    <xsl:param name="testParam2" />
     <xsl:element name="div">
       <xsl:attribute name="data-dojo-type">dijit/layout/ContentPane</xsl:attribute>
       <xsl:attribute name="title"><xsl:value-of select="@name"/></xsl:attribute>
@@ -19,7 +23,7 @@
 
       
       <xsl:element name="div">
-        <xsl:attribute name="id">grid<xsl:value-of select="@name"/></xsl:attribute>
+        <xsl:attribute name="id">grid-<xsl:value-of select="$testParam2" />-<xsl:value-of select="@name"/></xsl:attribute>
       </xsl:element>
 
       <!-- load Dojo -->
@@ -43,7 +47,7 @@
               },
               selectionMode: 'single', // for Selection; only select a single row at a time
               cellNavigation: false // for Keyboard; allow only row-level keyboard navigation
-              }, 'grid<xsl:value-of select="@name"/>');
+              }, 'grid-<xsl:value-of select="$testParam2" />-<xsl:value-of select="@name"/>');
           grid.renderArray(data);
         });
       </script>

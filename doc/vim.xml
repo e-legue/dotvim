@@ -21,23 +21,11 @@
         <keys>:Helptags</keys>
         <description>Generate help tags along the runtimepath (pathogen instruction)</description>
       </map>
-      <map>
-        <keys>^]</keys>
-        <description>Jump to tag.</description>
-      </map>
-      <map>
-        <keys>^O or ^T</keys>
-        <description>Go back where you were.</description>
-      </map>
     </section>
     <section name="General">
       <map>
         <keys>\\</keys>
-        <description>localleader</description>
-      </map>
-      <map>
-        <keys>,f</keys>
-        <description>Jump to tag into vertical split</description>
+        <description>local leader</description>
       </map>
       <map>
         <keys>gd [i</keys>
@@ -56,7 +44,7 @@
         <description>Hightlight current line or column. Use prefix no to unset</description>
       </map>
       <map mode="xml-plugin">
-        <keys>&lt;localleader&gt;%</keys>
+        <keys>&lt;local_leader&gt;%</keys>
         <description>jump to the matching tag</description>
       </map>
       <map mode="count pattern">
@@ -71,6 +59,28 @@
       <map>
         <keys>^vx91</keys>
         <description>type character 0x91 (&lt;91&gt;)</description>
+      </map>
+    </section>
+    <section name="Tags">
+      <map>
+        <keys>&lt;local_leader&gt;t</keys>
+        <description>Jump to tag into vertical split</description>
+      </map>
+      <map>
+        <keys>:t[np]</keys>
+        <description>Go to next/previous entry in ctags file.</description>
+      </map>
+      <map>
+        <keys>:ts</keys>
+        <description>Get list of entries in ctags file.</description>
+      </map>
+      <map>
+        <keys>^]</keys>
+        <description>Jump to tag.</description>
+      </map>
+      <map>
+        <keys>^O or ^T</keys>
+        <description>Go back where you were.</description>
       </map>
     </section>
 

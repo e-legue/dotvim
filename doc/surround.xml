@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/refcard.xsl"?>
+<root>
+  <mapping>
+    <section name="General">
+      <map>
+        <keys>:help surround.txt</keys>
+        <description>Internal documentation</description>
+      </map>
+
+      <map>
+        <keys>ysiw"</keys>
+        <description>add " to current word</description>
+      </map>
+      <map>
+        <keys>cs"\'</keys>
+        <description>change surroundings " to \'</description>
+      </map>
+      <map>
+        <keys>ds"</keys>
+        <description>delete surroundings "</description>
+      </map>
+    </section>
+  </mapping>
+
+</root>
+

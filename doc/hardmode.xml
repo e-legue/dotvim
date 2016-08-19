@@ -3,9 +3,13 @@
 <root>
   <note>
     <![CDATA[
-    See articles:
+    <br/>
+    <p>Use F10 to toggle Hardmode.</p>
+
+    <p>See articles:</p>
     <ul>
-      <li>https://pbrisbin.com/posts/hard_mode/</li>
+      <li><a href="https://pbrisbin.com/posts/hard_mode/">https://pbrisbin.com/posts/hard_mode</a></li>
+      <li><a href="http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/">http://vimcasts.org/blog/2013/02/habit-breaking-habit-making/</a></li>
     </ul>
     ]]>
   </note>

@@ -72,7 +72,9 @@
       <xsl:attribute name="selected">true</xsl:attribute>
       <xsl:element name="a"><xsl:attribute name="href"><xsl:value-of select="@url"/></xsl:attribute><xsl:attribute name="target">_blank</xsl:attribute>Reference</xsl:element><br/>
       
-      <xsl:apply-templates select= "document(concat(concat('../', @name),'.xml'))"/>
+      <xsl:apply-templates select= "document(concat(concat('../', @name),'.xml'))">
+        <xsl:with-param name="testParam"><xsl:value-of select="@name"/></xsl:with-param>
+      </xsl:apply-templates>
       
     </xsl:element>
   </xsl:template>

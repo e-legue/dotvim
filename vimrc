@@ -39,7 +39,7 @@ set showtabline=0 " to force notion of tab on ctrl-space.
 
 
 " use ,f to jump to tag in a vertical split
-nnoremap <silent> ,f :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
+nnoremap <silent> <leader>t :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
 
 " use ,gf to go to file in a vertical split
 nnoremap <silent> ,gf :vertical botright wincmd f<CR>
@@ -93,7 +93,7 @@ nnoremap <silent> <F10> :call ToggleHardMode()<CR>
 " ------------------------------------------
 "               TASK LIST
 " ------------------------------------------
-map <silent> <leader>td <Plug>TaskList
+" map <silent> <leader>td <Plug>TaskList
 
 " ------------------------------------------
 "                TAG BAR
@@ -122,6 +122,7 @@ nnoremap <silent> <F6> :Rgrep<CR>
 " -i Ignore case distinctions in both the PATTERN and the input files
 let Grep_Default_Options = '-I -i'
 if IsGCMLEAFED()
+"  let Grep_Skip_Dirs = '.* *rt_test* *test_rt* T[0-9][0-9][0-9] *test_acd* test'
   let Grep_Skip_Dirs = "'.*' '*rt_test*' '*test_rt*' 'T[0-9][0-9][0-9]' '*test_acd*' 'test'"
 else
   let Grep_Skip_Dirs = "'.*'"
