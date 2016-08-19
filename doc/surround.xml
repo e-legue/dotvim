@@ -4,7 +4,7 @@
   <mapping>
     <section name="General">
       <map>
-        <keys>:help surround.txt</keys>
+        <keys>:help surround</keys>
         <description>Internal documentation</description>
       </map>
 

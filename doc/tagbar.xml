@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/refcard.xsl"?>
+<root>
+  <note>
+    <![CDATA[
+    <br/>
+    <p>Use F12 to toggle Tagbar.</p>
+    <p>Tagbar is a plugin for browsing the tags of source code files. It provides a
+sidebar that displays the ctags-generated tags of the current file, ordered by
+their scope. This means that for example methods in C++ are displayed under
+the class they are defined in.</p>
+    ]]>
+  </note>
+  <mapping>
+    <section name="General">
+      <map>
+        <keys>:help tagbar</keys>
+        <description>Internal documentation</description>
+      </map>
+    </section>
+  </mapping>
+
+</root>
+

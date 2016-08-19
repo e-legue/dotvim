@@ -5,7 +5,7 @@
 
   <xsl:template match="mapping">
     <xsl:param name="testParam" />
-    <h2>Mappings <xsl:value-of select="$testParam" /></h2>
+    <h2>Mappings</h2>
     <div data-dojo-type="dijit/layout/TabContainer" style="width: 100%;" doLayout="false" data-dojo-props='tabStrip:true'>
       <xsl:apply-templates select="section">
         <xsl:with-param name="testParam2"><xsl:value-of select="$testParam" /></xsl:with-param>
