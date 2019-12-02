@@ -33,18 +33,25 @@
       </script>
       
       <style>
-.dgrid-column-command{
-    width:15em;
-}
+        .dgrid-column-command {
+            width: 30em;
+        }
 
-.dgrid {
-    height: auto;
-}
+        .dgrid {
+            height: auto;
+        }
 
-.dgrid .dgrid-scroller {
-    position: relative;
-    overflow: visible;
-}        
+        .dgrid .dgrid-scroller {
+            position: relative;
+            overflow: visible;
+        }        
+
+        .dgrid-row-even {
+            background: #CCC;
+        }
+        .dgrid-row-odd {
+            background: #FFF;
+        }    
       </style>
     </head>
     <body class="claro">

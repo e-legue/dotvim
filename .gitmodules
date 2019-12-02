@@ -79,3 +79,9 @@
 [submodule "bundle/ag"]
 	path = bundle/ag
 	url = https://github.com/ggreer/the_silver_searcher.git
+[submodule "bundle/presenting"]
+	path = bundle/presenting
+	url = https://github.com/sotte/presenting.vim.git
+[submodule "bundle/ZoomWin"]
+	path = bundle/ZoomWin
+	url = https://github.com/itspriddle/ZoomWin

@@ -21,11 +21,22 @@
         <keys>:Helptags</keys>
         <description>Generate help tags along the runtimepath (pathogen instruction)</description>
       </map>
+      <map>
+        <keys>seach patterns</keys>
+        <description>see https://vim.fandom.com/wiki/Search_patterns</description></map>
     </section>
     <section name="General">
       <map>
+        <keys>,icfh</keys>
+        <description>include c function header</description>
+      </map>
+      <map>
         <keys>\\</keys>
         <description>local leader</description>
+      </map>
+      <map>
+        <keys>^R%</keys>
+        <description>Insert the name of the current file. With @% the name is displayed relative to the current directory.</description>
       </map>
       <map>
         <keys>gd [i</keys>
@@ -47,10 +58,18 @@
         <keys>&lt;local_leader&gt;%</keys>
         <description>jump to the matching tag</description>
       </map>
+      <map mode="search a word">
+        <keys>/\\&lt;word\\&gt;</keys>
+        <description>search a word</description>
+      </map>
       <map mode="count pattern">
         <keys>:%s/<i>pattern</i>//gn</keys>
         <description>look for a string and find the number of occurrences</description>
         <reference>http://vimdoc.sourceforge.net/htmldoc/tips.html#count-items</reference>
+      </map>
+      <map>
+        <keys>:%s/<i>old</i>/<i>new</i>/gcI</keys>
+        <description>Use <b>I</b> for a case sensitive find and replace.</description>
       </map>
       <map>
         <keys>g[Uu]w</keys>
@@ -62,6 +81,18 @@
       </map>
     </section>
     <section name="Tags">
+       <map>
+        <keys>^]</keys>
+        <description>Jump to tag under cursor.</description>
+      </map>
+       <map>
+        <keys>g^]</keys>
+        <description>for ambigous tags.</description>
+      </map>
+      <map>
+        <keys>^t</keys>
+        <description>Jump back up the tag stack.</description>
+      </map>
       <map>
         <keys>&lt;local_leader&gt;t</keys>
         <description>Jump to tag into vertical split</description>
@@ -74,16 +105,33 @@
         <keys>:ts</keys>
         <description>Get list of entries in ctags file.</description>
       </map>
-      <map>
-        <keys>^]</keys>
-        <description>Jump to tag.</description>
+    </section>
+    <section name="Auto complete">
+       <map>
+        <keys>^x^n</keys>
+        <description>just for this file</description>
+      </map>
+       <map>
+        <keys>^x^f</keys>
+        <description>for filenames (work with path+=**, see vimrc)</description>
       </map>
       <map>
-        <keys>^O or ^T</keys>
-        <description>Go back where you were.</description>
+        <keys>^x^]</keys>
+        <description>for tags only</description>
+      </map>
+      <map>
+        <keys>^n or tab</keys>
+        <description>for anything specified by the 'complete' option</description>
+      </map>
+      <map>
+        <keys>^n or ^p</keys>
+        <description>to go back and forth in the suggestion list</description>
+      </map>
+      <map>
+        <keys>:help ins-completion</keys>
+        <description>access to the help</description>
       </map>
     </section>
-
     <section name="Command line">
       <map>
         <keys>vim -p[N] <i>files</i></keys>
@@ -138,6 +186,10 @@
       <map>
         <keys>F10</keys>
         <description>Toggle Hard/Easy mode</description>
+      </map>
+      <map>
+        <keys>F11</keys>
+        <description>Call to gcmtags. or use makeTags command.</description>
       </map>
       <map>
         <keys>F12</keys>
@@ -268,11 +320,57 @@
     <section name="argdo">
       <map>
         <keys>:argdo %s/old/new/ge</keys>
-        <description>will replace in every buffer</description>
+        <description>will replace in every buffer. to select buffer, use fch | xargs grep -n addCustom  | cut -d':' -f1-2 | xargs vs</description>
       </map>
     </section>
-
+    <section name="buffer">
+      <map>
+        <keys>:ls</keys>
+        <description>list all buffers</description>
+      </map>
+      <map>
+        <keys>:b#</keys>
+        <description>open buffer #, :b lets you autocomplete any open buffer.</description>
+      </map>
+      <map>
+        <keys>:sb#</keys>
+        <description>open buffer # in a split</description>
+      </map>
+      <map>
+        <keys>:vert sb#</keys>
+        <description>open buffer # in a vertical split</description>
+      </map>
+      <map>
+        <keys></keys>
+        <description># could be the buffer number (:ls) or a filename (part of)</description>
+      </map>
+      <map>
+        <keys>^wK or ^wJ</keys>
+        <description>to change two vertically split windows to horizontally split.</description>
+      </map>
+      <map>
+        <keys>^wH or ^wL</keys>
+        <description>to change two horizontally split windows to vertically split.</description>
+      </map>
+      <map>
+        <keys>^wr</keys>
+        <description>to swap two windows if they are not in the good order.</description>
+      </map>
+    </section>
+    <section name="xml">
+      <map>
+        <keys>dst</keys>
+        <description>delete surrounding tags</description>
+      </map>
+      <map>
+        <keys>dit</keys>
+        <description>delete inner tags</description>
+      </map>
+      <map>
+        <keys>yss</keys>
+        <description>yank surrounding tags (surrond plugin)</description>
+      </map>
+    </section>
   </mapping>
-
 </root>
 

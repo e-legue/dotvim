@@ -1,0 +1,17 @@
+/* ========================================================================= */
+/*
+ * .TH XXX
+ * .SH NAME
+ * XXX \- ONE_LINE_DESCRIPTION
+ * .SH SYNOPSIS(function)
+ * .SH DESCRIPTION
+ * B<XXX> ...
+ * .SH RETURN VALUE
+ * Upon successful completion, B<XXX> returns 0. Otherwise, it returns 1.
+ */
+void XXX(void)
+{
+
+
+}
+

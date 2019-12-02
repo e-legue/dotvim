@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl/refcard.xsl"?>
+<root>
+
+  <mapping>
+    <section name="help">
+      <map>
+        <keys>help <i>cmd</i></keys>
+        <description>display help of instruction <i>cmd</i>.</description>
+      </map>
+    </section>
+    <section name="command">
+      <map>
+        <keys>print /t <i>variable</i></keys>
+        <description>Display <i>variable</i> in binary format.</description>
+      </map>
+      <map>
+        <keys>set print pretty [on|off]</keys>
+        <description></description>
+      </map>
+      <map>
+        <keys>commands n [silent] .... end</keys>
+        <description></description>
+      </map>
+      <map>
+        <keys>save b filename</keys>
+        <description>save breakpoints in filename</description>
+      </map>
+      <map>
+        <keys>source filename</keys>
+        <description>load filename (could be list of breakpoints)</description>
+      </map>
+      <map>
+        <keys>until</keys>
+        <description>continue running until a source line past the current line, in the current stack frame, is reached.</description>
+      </map>
+      <map>
+        <keys>finish</keys>
+        <description>continue running until just after function in the selected stack frame returns.</description>
+      </map>
+      <map>
+        <keys>p *array@len</keys>
+        <description>display contents of array.</description>
+      </map>
+      <map>
+        <keys>b if xxx == yyyy</keys>
+        <description>conditional break point.</description>
+      </map>
+    </section>
+
+    <section name="frame">
+      <map>
+        <keys>up n</keys>
+        <description>select frame n frames up.</description>
+      </map>
+      <map>
+        <keys>down n</keys>
+        <description>select frame n frames down.</description>
+      </map>
+      <map>
+        <keys>bt [n]</keys>
+        <description>print trace of all frames in stack; or of n frames - innermost  if n&gt;0, outermost if n&lt;0. </description>
+      </map>
+
+    </section>      
+
+  </mapping>
+</root>
+

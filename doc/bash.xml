@@ -5,6 +5,10 @@
   <mapping>
     <section name="Last command">
       <map>
+        <keys>!!:gs/sol/act</keys>
+        <description>replace globally "sol" by "act" in the previous command line</description>
+      </map>
+     <map>
         <keys>!:0</keys>
         <description>the name of command executed</description>
       </map>
@@ -26,16 +30,165 @@
       </map>
     </section>
 
-    <section name="find">
+    <section name="find, xargs sed">
       <map>
         <keys>find ./ -name staf.in | xargs wc -l</keys>
         <description>count the number of line of every file named staf.in</description>
       </map>
       <map>
-        <keys>grep -lr vim.xsl * | xargs sed -i -e 's/vim.xsl/refcard.xsl/g'</keys>
+        <keys>find ./ -name staf.in -exec rm -f {} \\;</keys>
+        <description>delete files named staf.in</description>
+      </map>
+      <map>
+        <keys>grep -lr vim.xsl * | xargs sed -i -e "s/vim.xsl/refcard.xsl/g"</keys>
         <description>find in files and replace by with sed</description>
       </map>
     </section>
+
+
+    <section name="Command Editing Shortcuts">
+  <map>
+    <keys> Ctrl + a </keys>
+    <description>go to the start of the command line </description>
+  </map>
+  <map>
+    <keys> Ctrl + e </keys>
+    <description>go to the end of the command line </description>
+  </map>
+  <map>
+    <keys> Ctrl + k </keys>
+    <description>delete from cursor to the end of the command line </description>
+  </map>
+  <map>
+    <keys> Ctrl + u </keys>
+    <description>delete from cursor to the start of the command line </description>
+  </map>
+  <map>
+    <keys> Ctrl + w </keys>
+    <description>delete from cursor to start of word (i.e. delete backwards one word) </description>
+  </map>
+  <map>
+    <keys> Ctrl + y </keys>
+    <description>paste word or text that was cut using one of the deletion shortcuts (such as the one above) after the cursor </description>
+  </map>
+  <map>
+    <keys> Ctrl + xx </keys>
+    <description>move between start of command line and current cursor position (and back again) </description>
+  </map>
+  <map>
+    <keys> Alt + b </keys>
+    <description>move backward one word (or go to start of word the cursor is currently on) </description>
+  </map>
+  <map>
+    <keys> Alt + f </keys>
+    <description>move forward one word (or go to end of word the cursor is currently on) </description>
+  </map>
+  <map>
+    <keys> Alt + d </keys>
+    <description>delete to end of word starting at cursor (whole word if cursor is at the beginning of word) </description>
+  </map>
+  <map>
+    <keys> Alt + c </keys>
+    <description>capitalize to end of word starting at cursor (whole word if cursor is at the beginning of word) </description>
+  </map>
+  <map>
+    <keys> Alt + u </keys>
+    <description>make uppercase from cursor to end of word </description>
+  </map>
+  <map>
+    <keys> Alt + l </keys>
+    <description>make lowercase from cursor to end of word </description>
+  </map>
+  <map>
+    <keys> Alt + t </keys>
+    <description>swap current word with previous </description>
+  </map>
+  <map>
+    <keys> Ctrl + f </keys>
+    <description>move forward one character </description>
+  </map>
+  <map>
+    <keys> Ctrl + b </keys>
+    <description>move backward one character </description>
+  </map>
+  <map>
+    <keys> Ctrl + d </keys>
+    <description>delete character under the cursor </description>
+  </map>
+  <map>
+    <keys> Ctrl + h </keys>
+    <description>delete character before the cursor </description>
+  </map>
+  <map>
+    <keys> Ctrl + t </keys>
+    <description>swap character under cursor with the previous one </description>
+  </map>
+    </section>
+    <section name="Command Recall Shorcuts">
+
+  <map>
+    <keys> Ctrl + r </keys>
+    <description>search the history backwards </description>
+  </map>
+  <map>
+    <keys> Ctrl + g </keys>
+    <description>escape from history searching mode </description>
+  </map>
+  <map>
+    <keys> Ctrl + p </keys>
+    <description>previous command in history (i.e. walk back through the command history) </description>
+  </map>
+  <map>
+    <keys> Ctrl + n </keys>
+    <description>next command in history (i.e. walk forward through the command history) </description>
+  </map>
+  <map>
+    <keys> Alt + . </keys>
+    <description>use the last word of the previous command </description>
+  </map>
+
+    </section>
+    <section name="Command Control Shorcuts">
+
+  <map>
+    <keys> Ctrl + l </keys>
+    <description>clear the screen </description>
+  </map>
+  <map>
+    <keys> Ctrl + s </keys>
+    <description>stops the output to the screen (for long running verbose command) </description>
+  </map>
+  <map>
+    <keys> Ctrl + q </keys>
+    <description>allow output to the screen (if previously stopped using command above) </description>
+  </map>
+  <map>
+    <keys> Ctrl + c </keys>
+    <description>terminate the command </description>
+  </map>
+  <map>
+    <keys> Ctrl + z </keys>
+    <description>suspend/stop the command </description>
+  </map>
+
+    </section>
+    <section name="For loop / mail">
+
+  <map>
+    <keys>for i in $(seq 10 10 60) ; do bob -s -p $i/007-bh/ -P $((5000 + i/10))&amp; done </keys>
+    <description>Stats multiple instances of bob on differents cases.</description>
+  </map>
+  <map>
+    <keys>for i in $(seq 1 6); do kill %$i; done</keys>
+    <description>Kills the processes launched with the previous command.</description>
+  </map>
+
+  <map>
+    <keys>mail -a /opt/backup.sql -s "Backup File" user@example.com &lt; /dev/null</keys>
+    <description>Send a mail with -a for attachment.</description>
+  </map>
+    </section>
+
   </mapping>
 
 </root>

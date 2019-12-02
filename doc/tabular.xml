@@ -3,7 +3,7 @@
 <root>
   <note>
     <![CDATA[
-    VIMCASTS.org proposes one vides about this useful module:
+    VIMCASTS.org proposes one video about this useful module:
     <ul>
       <li><a href="http://vimcasts.org/episodes/aligning-text-with-tabular-vim/">Aligning text with Tabular.vim</a></li>
     </ul>  
@@ -14,6 +14,10 @@
       <map>
         <keys>:help tabular</keys>
         <description>Internal documentation</description>
+      </map>
+      <map>
+        <keys>Tab/.*\\s/l0</keys>
+        <description>Sequence to align struct member.</description>
       </map>
     </section>
   </mapping>
